@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-footer {
+  color: #fff;
+  background-color: #000;
+}
+
+.page-footer__inner {
+  padding-left: 145px;
+  padding-right: 145px;
+}
+
+.page-footer__top-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  padding-bottom: 74px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.page-footer__logo {
+  margin-bottom: 30px;
+}
+
+.page-footer__social-links {
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 57px;
+}
+
+.page-footer__top-item-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.page-footer__bottom-wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+}

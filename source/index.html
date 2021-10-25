@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Edge и ряд мобильных браузеров слишком умны. Отключим это. -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+
+  <!-- Предзагрузка шрифтов или иных ресурсов -->
+  <!-- <link rel="preload" href="fonts/Bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <title>Page Name</title>
+</head>
+
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <nav class="main-nav" id="nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Портфолио</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Услуги</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Клиенты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <include src="parts/page-header.html"></include>
+
+      <main class="page__main">
+
+        <section class="about-section page-section" id="about-section">
+          <div class="container">
+            <div class="about-section__inner">
+              <div class="about-section__left-wrap">
+                <h2 class="about-section__title section-title">About Us</h2>
+                <a class="button button--accent" href="#">Узнать больше</a>
+              </div>
+              <div class="about-section__right-wrap">
+                <ul class="about-section__right-list">
+                  <li class="about-section__right-list-item">
+                    <p>
+                      <span>Репутационный маркетинг</span> - чистим репутацию и защищаем ее от атак конкурентов, какой
+                      бизнес вы бы ни вели.
+                    </p>
+                  </li>
+                  <li class="about-section__right-list-item">
+                    <p>
+                      <span>Фабрика контента</span> - любое ваше решение может быть выражено в словах. От спичрайтинга
+                      до лонгридов и мемов.
+                    </p>
+                  </li>
+                  <li class="about-section__right-list-item">
+                    <p>
+                      <span>Создание сайтов</span> - создаем площадки, которые будут продавать вашу идею.
+                    </p>
+                  </li>
+                </ul>
+                <p>Больше? Реализация любых задач с помощью всех инструментов Artdock</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="services-section page-section">
+          <div class="container">
+            <div class="services-section__inner">
+              <div class="services-section__left-wrap">
+                <h2 class="services-section__title section-title">В чём мы сильны</h2>
+                <a class="services-section__order-button button" href="#">Заказать услугу</a>
+              </div>
+              <div class="services-section__right-wrap">
+                <ul class="services-section__list">
+                  <li class="services-section__list-item">
+                    <a class="services-section__list-item-link" href="#">
+                      Комплексный аудит
+                    </a>
+                  </li>
+                  <li class="services-section__list-item">
+                    <a class="services-section__list-item-link" href="#">
+                      Дизайн
+                    </a>
+                  </li>
+                  <li class="services-section__list-item">
+                    <a class="services-section__list-item-link" href="#">
+                      Разработка сайтов
+                    </a>
+                  </li>
+                  <li class="services-section__list-item">
+                    <a class="services-section__list-item-link" href="#">
+                      Реклама
+                    </a>
+                  </li>
+                  <li class="services-section__list-item">
+                    <a class="services-section__list-item-link" href="#">
+                      Поддержка
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="portfolio-section">
+          <div class="container">
+            <header class="portfolio-section__header">
+              <h2 class="portfolio-section__title section-title">
+                Portfolio
+              </h2>
+              <a class="portfolio-section__link-to-all" href="#">
+                Смотреть кейсы
+              </a>
+            </header>
+          </div>
+
+
+          <ul class="portfolio-section__list">
+            <li class="portfolio-section__list-item">
+              <div class="portfolio-item" href="#">
+                <a class="portfolio-item__link" href="#"></a>
+                <img class="portfolio-item__background" src="images/portfolio-1.jpg" alt="">
+                <div class="portfolio-item__content">
+                  <span class="portfolio-item__date">март 2021</span>
+                  <h2 class="portfolio-item__title">
+                    Разработка сайта Vipton
+                  </h2>
+                </div>
+              </div>
+            </li>
+            <li class="portfolio-section__list-item">
+              <div class="portfolio-item" href="#">
+                <a class="portfolio-item__link" href="#"></a>
+                <img class="portfolio-item__background" src="images/portfolio-2.jpg" alt="">
+                <div class="portfolio-item__content">
+                  <span class="portfolio-item__date">март 2021</span>
+                  <h2 class="portfolio-item__title">
+                    Разработка сайта Vipton
+                  </h2>
+                </div>
+              </div>
+            </li>
+            <li class="portfolio-section__list-item">
+              <div class="portfolio-item" href="#">
+                <a class="portfolio-item__link" href="#"></a>
+                <img class="portfolio-item__background" src="images/portfolio-3.jpg" alt="">
+                <div class="portfolio-item__content">
+                  <span class="portfolio-item__date">март 2021</span>
+                  <h2 class="portfolio-item__title">
+                    Разработка сайта Vipton
+                  </h2>
+                </div>
+              </div>
+            </li>
+            <li class="portfolio-section__list-item">
+              <div class="portfolio-item" href="#">
+                <a class="portfolio-item__link" href="#"></a>
+                <img class="portfolio-item__background" src="images/portfolio-4.jpg" alt="">
+                <div class="portfolio-item__content">
+                  <span class="portfolio-item__date">март 2021</span>
+                  <h2 class="portfolio-item__title">
+                    Разработка сайта Vipton
+                  </h2>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </section>
+
+        <section class="some-section">
+          <div class="container">
+            <div class="some-section__inner">
+              <div class="some-section__left-wrap">
+                <h2 class="some-section__title section-title">Section</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor eleifend non ac. Tristique
+                  sagittis ipsum vestibulum, eget viverra ultrices.
+                </p>
+                <p>
+                  Neque fermentum massa praesent adipiscing sit. Et, nec arcu tincidunt amet commodo. Dignissim aliquam,
+                  eu neque vitae nam adipiscing diam. Integer vitae arcu, ut fusce turpis vitae faucibus lacinia.
+                </p>
+                <a class="some-section__button button" href="#">
+                  Заказать услугу
+                </a>
+              </div>
+              <div class="some-section__right-wrap">
+                <img src="images/about-1.jpg" width="590" height="590" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="advantages-section">
+          <div class="container">
+            <h2 class="advantages-section__title section-title">Почему именно мы</h2>
+          </div>
+          <div class="advantages-section__slider advantages-slider js-slider" data-slider-name="advantages-slider">
+            <div class="container container--standart">
+
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">01</div>
+                    <h2 class="advantages-slider__item-title">ИНДИВИДУАЛЬНЫЙ <br> ПОДХОД </h2>
+                  </div>
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">02</div>
+                    <h2 class="advantages-slider__item-title">ПРОФЕССИОНАЛИЗМ</h2>
+                  </div>
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">03</div>
+                    <h2 class="advantages-slider__item-title">ГЛУБОКИЙ АНАЛИЗ</h2>
+                  </div>
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">04</div>
+                    <h2 class="advantages-slider__item-title">НАШИ НАРАБОТКИ</h2>
+                  </div>
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">05</div>
+                    <h2 class="advantages-slider__item-title">ЭКСКЛЮЗИВНЫЙ ДИЗАЙН</h2>
+                  </div>
+                  <div class="swiper-slide advantages-slider__item">
+                    <div class="advantages-slider__item-num">06</div>
+                    <h2 class="advantages-slider__item-title">ПЕРФЕКЦИОНИЗМ И ЮЗАБИЛИТИ</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <section class="feedback-section page-section">
+          <div class="container">
+            <div class="feedback-section__inner">
+              <div class="feedback-section__left-wrap">
+                <h2 class="feedback-section__title"><span>Готовы</span> работать с нами</h2>
+                <a class="button button--dark" href="#">Заказть услугу</a>
+              </div>
+              <form class="feedback-section__right-wrap feedback-form">
+                <h3 class="feedback-form__title">Напишите нам</h3>
+                <div class="feedback-form__inner">
+                  <div class="feedback-form__left-wrap">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="name" type="text" placeholder="Имя">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="email" type="email" placeholder="Email">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="tel" type="tel" placeholder="Телефон">
+                      </span>
+                    </label>
+                  </div>
+                  <div class="feedback-form__right-wrap">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" rows="8" placeholder="Сообщение"></textarea>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <footer class="feedback-form__footer">
+                  <div class="feedback-form__footer-info-wrap">
+                    <a class="feedback-form__footer-email" href="mailto:blackwave@gmail.com">
+                      blackwave@gmail.com
+                    </a>
+                    <a href="tel:380675907777" class="feedback-form__footer-tel">
+                      +38 (067) 590 77 77
+                    </a>
+                  </div>
+                  <div class="feedback-form__footer-submit-btn-wrap">
+                    <button class="feedback-form__footer-submit-btn" type="submit">
+                      Отправить
+                      <svg width="26" height="21">
+                        <use xlink:href="images/sprite.svg#right-arrow-icon">
+                      </svg>
+                    </button>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrap">
+      <include src="parts/page-footer.html"></include>
+      <a class="to-top to-top--visible" id="to-top" href="#">↑</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/main.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока field-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-text {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.field-text__name {
+  display: block;
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.field-text__input-wrap {
+  display: block;
+}
+
+.field-text__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #a3a3a3;
+  padding: 10px 0;
+  line-height: 1.5;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #fff;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.field-text__input:focus {
+  border-bottom-color: #000;
+  outline: none;
+}
+
+.field-text textarea {
+  height: auto;
+  resize: vertical;
+}
+
+.field-text__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.field-text__help-text {
+  display: block;
+  padding-top: 0.4em;
+  font-size: 0.75em;
+  line-height: 1.2em;
+}
+
+.field-text__help-text:empty {
+  display: none;
+}

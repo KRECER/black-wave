@@ -1,0 +1,54 @@
+.some-section {
+  color: #fff;
+  background: url("../images/bg-some-section--waves.svg") no-repeat -33px -33px;
+  background-color: #000;
+}
+
+.some-section__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.some-section__left-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 425px;
+  padding-top: 139px;
+  padding-bottom: 139px;
+}
+
+.some-section__left-wrap p {
+  margin-bottom: 30px;
+  font-family: '"Roboto"', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+  color: #a8a8a8;
+}
+
+.some-section__title {
+  margin-bottom: 78px;
+}
+
+.some-section__button {
+  margin-top: 21px;
+}
+
+.some-section__right-wrap {
+  position: relative;
+  padding-right: 69px;
+  padding-left: 163px;
+  padding-top: 139px;
+  padding-bottom: 139px;
+  background: url("../images/bg-some-section--triangles.png") no-repeat right
+    top;
+}
+
+.some-section__right-wrap::after {
+  content: "";
+  position: absolute;
+  top: 139px;
+  bottom: 0;
+  left: -458px;
+  width: 1200px;
+  background: url("../images/bg-some-section--triangle.svg") no-repeat;
+}

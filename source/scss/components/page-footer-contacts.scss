@@ -1,0 +1,21 @@
+.page-footer-contacts {
+  margin-bottom: 20px;
+}
+
+.page-footer-contacts__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.page-footer-contacts__item-key {
+  font-size: 19px;
+  line-height: 40px;
+}
+
+.page-footer-contacts__item-value {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+}

@@ -1,0 +1,42 @@
+.advantages-slider {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  padding-left: 240px;
+  padding-right: 240px;
+  background: #fff url("../images/bg-advantages-section.jpg") no-repeat top
+    center;
+  background-size: cover;
+}
+
+.advantages-slider .swiper-button-prev {
+  left: 178px;
+}
+
+.advantages-slider .swiper-button-next {
+  right: 86px;
+}
+
+.advantages-slider .swiper-button-prev::after,
+.advantages-slider .swiper-button-next::after {
+  color: #000;
+  font-size: inherit;
+}
+
+.advantages-slider__item {
+  display: flex;
+  align-items: center;
+}
+
+.advantages-slider__item-num {
+  margin-right: 30px;
+  font-size: 190px;
+  line-height: 1.1;
+  -webkit-text-stroke: #000 1px;
+  color: transparent;
+}
+
+.advantages-slider__item-title {
+  font-size: 60px;
+  line-height: 63px;
+}

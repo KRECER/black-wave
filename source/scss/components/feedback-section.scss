@@ -1,0 +1,30 @@
+.feedback-section {
+  background: url("../images/bg-feedback-section.svg") no-repeat right 516px;
+}
+
+.feedback-section__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback-section__left-wrap {
+  width: 100%;
+  max-width: 381px;
+}
+
+.feedback-section__title {
+  margin-bottom: 141px;
+  font-size: 80px;
+  line-height: 88px;
+  color: var(--accent-color);
+}
+
+.feedback-section__title span {
+  color: #000;
+}
+
+.feedback-section__right-wrap {
+  width: 100%;
+  max-width: 847px;
+}

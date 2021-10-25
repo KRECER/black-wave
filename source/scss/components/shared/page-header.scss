@@ -1,0 +1,165 @@
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-header {
+  min-height: 100vh;
+  background: #000 url('../images/bg-page-header.jpg') no-repeat top center;
+  background-size: cover;
+  color: #fff;
+}
+
+.page-header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.page-header__sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  border-right: 1px solid #8b979a;
+  background-color: #000;
+}
+
+.page-header__sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 1px;
+  height: 196px;
+  background-color: var(--accent-color);
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: flex-end;
+  padding: 63px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 19px;
+  line-height: 40px;
+}
+
+.page-header__title {
+  margin-bottom: 43px;
+  font-size: 72px;
+  line-height: 75px;
+}
+
+.page-header__content {
+  max-width: 721px;
+  margin-bottom: 40px;
+}
+
+.page-header__content span {
+  font-family: '"Roboto"', sans-serif;
+  font-weight: 300;
+}
+
+.page-header__text {
+  margin-bottom: 30px;
+  font-family: '"Roboto"', sans-serif;
+  font-weight: 400;
+  color: #a8a8a8;
+}
+
+.page-header__description {
+  font-family: '"Roboto"', sans-serif;
+  font-weight: 400;
+}
+
+.page-header__bottom {
+  display: flex;
+  column-gap: 30px;
+}
+
+.page-header__bottom-left-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+}
+
+.page-header__bottom-left-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 50%;
+  background-color: #fff;
+  opacity: 0.13;
+}
+
+.page-header__bottom-right-wrap {
+  position: relative;
+  width: 50%;
+  padding-top: 50px;
+  padding-left: 97px;
+  padding-bottom: 14px;
+  color: #000;
+  background-color: #fff;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 100vw;
+    background-color: #fff;
+  }
+}
+
+.page-header__services-link {
+  border-left: 1px solid var(--accent-color);
+  padding-left: 20px;
+  font-size: 19px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  transition: border-left-color 0.3s;
+}
+
+.page-header__services-link:hover {
+  border-left-color: #d9b94e;
+  color: #d9b94e;
+  text-decoration: none;
+}
+
+.page-header__scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(180deg) translateY(-30%);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: '"Roboto"', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.page-header__scroll-down-text {
+  margin: 10px 0;
+  writing-mode: tb-rl;
+}
+
+.page-header__scroll-down-icon {
+  transform: rotate(180deg);
+}
