@@ -19,6 +19,8 @@ const debug = require('gulp-debug');
 const path = require('path');
 const sassGlob = require('gulp-sass-glob');
 const inlineSVG = require('postcss-inline-svg');
+const ghpages = require('gh-pages');
+
 const mode = process.env.MODE;
 
 // Настройки бьютификатора HTML
@@ -88,6 +90,11 @@ const copyImages = () => {
     .pipe(gulp.dest('build/images'));
 };
 
+const deploy = (cb) => {
+  ghpages.publish(path.join(process.cwd(), 'build/'), cb);
+};
+exports.deploy = deploy;
+
 const server = () => {
   sync.init({
     server: {
@@ -136,9 +143,6 @@ const scripts = () => {
   return gulp.src('source/js/script.js')
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig))
-    .pipe(rename({
-      suffix: mode === 'production' ? '.min' : '',
-    }))
     .pipe(gulp.dest('build/js'))
     .pipe(sync.stream());
 };
