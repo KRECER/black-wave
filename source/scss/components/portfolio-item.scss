@@ -1,9 +1,9 @@
 .portfolio-item {
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
   padding-top: 273px;
   padding-left: 25px;
   padding-right: 25px;
@@ -13,20 +13,20 @@
 .portfolio-item__link {
   position: absolute;
   z-index: 2;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
 }
 
 .portfolio-item::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 0;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   transition: mix-blend-mode 0.3s;
 }
 

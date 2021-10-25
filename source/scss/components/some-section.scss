@@ -1,6 +1,6 @@
 .some-section {
   color: #fff;
-  background: url("../images/bg-some-section--waves.svg") no-repeat -33px -33px;
+  background: url('../images/bg-some-section--waves.svg') no-repeat -33px -33px;
   background-color: #000;
 }
 
@@ -39,16 +39,16 @@
   padding-left: 163px;
   padding-top: 139px;
   padding-bottom: 139px;
-  background: url("../images/bg-some-section--triangles.png") no-repeat right
-    top;
+  background: url('../images/bg-some-section--triangles.png') no-repeat;
+  background-position: right top;
 }
 
 .some-section__right-wrap::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 139px;
   bottom: 0;
   left: -458px;
   width: 1200px;
-  background: url("../images/bg-some-section--triangle.svg") no-repeat;
+  background: url('../images/bg-some-section--triangle.svg') no-repeat;
 }

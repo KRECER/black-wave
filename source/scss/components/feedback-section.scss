@@ -1,11 +1,11 @@
 .feedback-section {
-  background: url("../images/bg-feedback-section.svg") no-repeat right 516px;
+  background: url('../images/bg-feedback-section.svg') no-repeat right 516px;
 }
 
 .feedback-section__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .feedback-section__left-wrap {

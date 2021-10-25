@@ -56,7 +56,7 @@
 }
 
 .services-slider__item-link::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 0;
@@ -67,11 +67,11 @@
 }
 
 .services-slider__counter-wrap {
+  display: flex;
+  align-items: flex-end;
   position: absolute;
   right: 0;
   bottom: 30px;
-  display: flex;
-  align-items: flex-end;
 }
 
 .services-slider__current-slide-number {

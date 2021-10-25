@@ -30,7 +30,6 @@
   font-size: 1em;
   font-family: inherit;
   background-color: #fff;
-  -moz-appearance: textfield;
   appearance: textfield;
 }
 
@@ -45,7 +44,7 @@
 }
 
 .field-text__input::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: '"Roboto"', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;

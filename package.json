@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "npm run test:style && npm run test:js",
-    "test:style": "npx stylelint \"source/scss/**/*.scss\" --syntax=scss",
+    "test:style": "npx stylelint \"source/scss/**/*.scss\" --syntax=scss --color",
     "test:js": "eslint source/js/**/*.js",
     "start": "cross-env MODE=development npx gulp",
     "build": "cross-env MODE=production npx gulp build",

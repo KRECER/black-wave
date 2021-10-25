@@ -39,7 +39,7 @@ let postCssPlugins = [
 ];
 
 const webpackConfig = {
-  mode: 'production',
+  mode,
   devtool: mode === 'development' ? 'inline-source-map' : false,
   entry: path.resolve(__dirname, 'source/js/script.js'),
   output: {
@@ -97,7 +97,6 @@ const server = () => {
     notify: false,
     ui: false,
     port: 8080,
-    open: false,
   });
 
   gulp.watch('source/scss/**/*.scss', gulp.series(styles));

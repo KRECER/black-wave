@@ -4,8 +4,10 @@
   padding-bottom: 180px;
   padding-left: 240px;
   padding-right: 240px;
-  background: #fff url("../images/bg-advantages-section.jpg") no-repeat top
-    center;
+  background-color: #fff;
+  background-image: url('../images/bg-advantages-section.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
 }
 

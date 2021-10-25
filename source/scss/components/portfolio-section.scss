@@ -4,8 +4,8 @@
 
 .portfolio-section__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 100px;
 }
 
@@ -26,20 +26,20 @@
 }
 
 .portfolio-section__link-to-all::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 1px;
   background-color: var(--accent-color);
 }
 
 .portfolio-section__link-to-all::before {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 1px;
   height: calc(100% + 27vmin);
   background-color: rgba(0, 0, 0, 0.1);
