@@ -1,4 +1,4 @@
-name: website
+name: Build and Deploy
 
 on: push
 
@@ -6,27 +6,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v2
-      - name: Gen dummy page
+
+      - name: Install and Build 🔧
         run: |
-          mkdir public
-          cat > public/index.html <<EOL
-          <!doctype html>
-          <html>
-            <head>
-              <title>GitHub Pages deployed!</title>
-            </head>
-            <body>
-              <p>GitHub Pages with <strong>${{ github.sha }}</strong> commit ID has been deployed through <a href="https://github.com/marketplace/actions/github-pages">GitHub Pages action</a> successfully.</p>
-            </body>
-          </html>
-          EOL
-      - name: Deploy to GitHub Pages
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages 🚀
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: public
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
