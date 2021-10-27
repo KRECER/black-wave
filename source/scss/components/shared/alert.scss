@@ -11,12 +11,14 @@
   color: $text-color;
   background-color: lighten($color-warning, 30%);
 
-  & > * { // stylelint-disable-line  selector-combinator-blacklist
+  & > * {
+    // stylelint-disable-line  selector-combinator-blacklist
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  & > * + * { // stylelint-disable-line  selector-combinator-blacklist
+  & > * + * {
+    // stylelint-disable-line  selector-combinator-blacklist
     margin-top: $typo-margin-vertical;
   }
 
@@ -40,8 +42,6 @@
     right: 0;
     margin: 0;
   }
-
-
 
   &--warning {
     background-color: lighten($color-warning, 30%);

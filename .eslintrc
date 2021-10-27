@@ -1,18 +1,38 @@
 {
   "root": true,
   "parser": "@babel/eslint-parser",
-  "extends": "eslint:recommended",
+  "extends": [
+    "plugin:import/recommended",
+    "eslint:recommended",
+    "airbnb-base",
+    "prettier"
+  ],
   "globals": {
     "require": true
   },
-  "rules": {
-    "strict": 0
-  },
   "parserOptions": {
-    "requireConfigFile": false
+    "requireConfigFile": false,
+    "ecmaVersion": 11,
+    "sourceType": "module"
   },
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es2021": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@utils", "source/js/utils"],
+          ["@components", "source/js/components"]
+        ]
+      }
+    }
+  },
+  "rules": {
+    "strict": 0,
+    "prettier/prettier": "error"
   }
 }
