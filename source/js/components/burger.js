@@ -1,4 +1,4 @@
-const burgers = document.querySelectorAll('.burger');
+var burgers = document.querySelectorAll('.burger');
 
 function showBurgerTarget() {
   const targetId = this.getAttribute('data-target-id');
