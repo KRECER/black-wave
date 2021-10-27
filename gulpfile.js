@@ -20,8 +20,7 @@ const path = require('path');
 const sassGlob = require('gulp-sass-glob');
 const inlineSVG = require('postcss-inline-svg');
 const ghpages = require('gh-pages');
-
-const mode = process.env.MODE;
+const webpackConfig = require('./webpack.config');
 
 // Настройки бьютификатора HTML
 let prettyOption = {
@@ -39,42 +38,6 @@ let postCssPlugins = [
   }),
   inlineSVG(),
 ];
-
-const webpackConfig = {
-  mode,
-  devtool: mode === 'development' ? 'inline-source-map' : false,
-  entry: path.resolve(__dirname, 'source/js/script.js'),
-  output: {
-    filename: '[name].js',
-  },
-  resolve: {
-    alias: {
-      '@utils': path.resolve(__dirname, 'source/js/utils/'),
-    },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js)$/,
-        exclude: /(node_modules)/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [{
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          }
-        ]
-      },
-    ]
-  },
-};
 
 const reload = (done) => {
   sync.reload();

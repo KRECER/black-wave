@@ -8,6 +8,6 @@ const getScrollSize = function () {
   const scrollbarSize = outer.offsetWidth - inner.offsetWidth;
   document.body.removeChild(outer);
   return scrollbarSize;
-}
+};
 
 export default getScrollSize;

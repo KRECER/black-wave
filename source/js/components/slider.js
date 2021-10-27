@@ -1,11 +1,9 @@
 import Swiper from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
 
 const SliderOption = {
-  "services-slider": {},
-  "advantages-slider": {
+  'services-slider': {},
+  'advantages-slider': {
     loop: true,
     autoplay: {
       delay: 3000,
@@ -13,20 +11,18 @@ const SliderOption = {
   },
 };
 
-const sliders = document.querySelectorAll(".js-slider");
+const sliders = document.querySelectorAll('.js-slider');
 
 sliders.forEach((sliderEl) => {
-  const hasCounter = Boolean(sliderEl.querySelector(".js-slides-counter"));
-  const sliderName = sliderEl.dataset.sliderName;
+  const hasCounter = Boolean(sliderEl.querySelector('.js-slides-counter'));
+  const { sliderName } = sliderEl.dataset;
   const sliderOptions = SliderOption[sliderName];
-  const buttonPrevEl = sliderEl.querySelector(".swiper-button-prev");
-  const buttonNextEl = sliderEl.querySelector(".swiper-button-next");
-  const swiperEl = sliderEl.querySelector(".swiper");
-  const slidesTotalCount = sliderEl.querySelectorAll(".swiper-slide").length;
+  const buttonPrevEl = sliderEl.querySelector('.swiper-button-prev');
+  const buttonNextEl = sliderEl.querySelector('.swiper-button-next');
+  const swiperEl = sliderEl.querySelector('.swiper');
+  const slidesTotalCount = sliderEl.querySelectorAll('.swiper-slide').length;
 
-  const getCorrectNum = (num) => {
-    return (num <= 9 ? "0" : "") + num;
-  };
+  const getCorrectNum = (num) => (num <= 9 ? '0' : '') + num;
 
   if (buttonPrevEl && buttonNextEl) {
     sliderOptions.navigation = { prevEl: buttonPrevEl, nextEl: buttonNextEl };
@@ -37,20 +33,21 @@ sliders.forEach((sliderEl) => {
       on: {
         init() {
           const slidesTotalNumEl = sliderEl.querySelector(
-            ".js-slides-total-num"
+            '.js-slides-total-num'
           );
           slidesTotalNumEl.textContent = getCorrectNum(slidesTotalCount);
         },
         slideChange(swiper) {
           const currentSlideNumEl = sliderEl.querySelector(
-            ".js-current-slide-num"
+            '.js-current-slide-num'
           );
           const idx = swiper.realIndex + 1;
-          currentSlideNumEl.innerHTML = getCorrectNum(idx) + "/";
+          currentSlideNumEl.textContent = `${getCorrectNum(idx)}/`;
         },
       },
     });
   }
 
+  // eslint-disable-next-line no-new
   new Swiper(swiperEl, sliderOptions);
 });
