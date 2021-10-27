@@ -1,26 +1,32 @@
-name: Node.js CI
-on:
-  push:
-    branches:
-      - dev
+name: website
+
+on: push
 
 jobs:
-  build-test-deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set-up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - run: npm install
-      - run: npm run build
-      - run: npm test
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v1
+      - name: Gen dummy page
+        run: |
+          mkdir public
+          cat > public/index.html <<EOL
+          <!doctype html>
+          <html>
+            <head>
+              <title>GitHub Pages deployed!</title>
+            </head>
+            <body>
+              <p>GitHub Pages with <strong>${{ github.sha }}</strong> commit ID has been deployed through <a href="https://github.com/marketplace/actions/github-pages">GitHub Pages action</a> successfully.</p>
+            </body>
+          </html>
+          EOL
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: build
+          build_dir: public
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_PAT}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
