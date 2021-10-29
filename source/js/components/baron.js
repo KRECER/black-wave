@@ -8,5 +8,3 @@
 //   draggingCls: 'baron--dragging',
 //   barOnCls: 'baron--scrollbar',
 // });
-
-const a = 10;
