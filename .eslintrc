@@ -2,10 +2,10 @@
   "root": true,
   "parser": "@babel/eslint-parser",
   "extends": [
-    "plugin:import/recommended",
-    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
     "airbnb-base",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "require": true
@@ -23,16 +23,17 @@
   },
   "settings": {
     "import/resolver": {
-      "alias": {
-        "map": [
-          ["@utils", "source/js/utils"],
-          ["@components", "source/js/components"]
-        ]
+      "babel-module": {
+        "extensions": [".js"],
+        "alias": {
+          "@utils": "./source/js/utils",
+          "@components": "./source/js/components"
+        }
       }
     }
   },
   "rules": {
-    "strict": 0,
+    "func-names": "off",
     "prettier/prettier": "error"
   }
 }

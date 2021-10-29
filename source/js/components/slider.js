@@ -1,4 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
 import Swiper from 'swiper/bundle';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/bundle';
 
 const SliderOption = {
@@ -33,13 +35,13 @@ sliders.forEach((sliderEl) => {
       on: {
         init() {
           const slidesTotalNumEl = sliderEl.querySelector(
-            '.js-slides-total-num'
+            '.js-slides-total-num',
           );
           slidesTotalNumEl.textContent = getCorrectNum(slidesTotalCount);
         },
         slideChange(swiper) {
           const currentSlideNumEl = sliderEl.querySelector(
-            '.js-current-slide-num'
+            '.js-current-slide-num',
           );
           const idx = swiper.realIndex + 1;
           currentSlideNumEl.textContent = `${getCorrectNum(idx)}/`;

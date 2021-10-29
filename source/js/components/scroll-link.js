@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import animate from '@utils/animate';
 
 function getOffsetRect(elem) {

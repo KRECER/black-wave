@@ -50,13 +50,13 @@ document.addEventListener('click', (event) => {
           window.history.pushState(
             stateObject,
             document.title,
-            window.location.pathname + target
+            window.location.pathname + target,
           );
         } else {
           window.history.replaceState(
             stateObject,
             document.title,
-            window.location.pathname + target
+            window.location.pathname + target,
           );
         }
       }
