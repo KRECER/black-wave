@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import animate from '@utils/animate';
 
 function visibilityToggle() {
@@ -28,7 +27,7 @@ if (document.getElementById('to-top')) {
         },
       });
     },
-    false
+    false,
   );
 
   window.addEventListener('scroll', visibilityToggle);

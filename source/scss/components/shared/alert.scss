@@ -12,13 +12,11 @@
   background-color: lighten($color-warning, 30%);
 
   & > * {
-    // stylelint-disable-line  selector-combinator-blacklist
     margin-top: 0;
     margin-bottom: 0;
   }
 
   & > * + * {
-    // stylelint-disable-line  selector-combinator-blacklist
     margin-top: $typo-margin-vertical;
   }
 

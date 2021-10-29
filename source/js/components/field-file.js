@@ -9,7 +9,7 @@ import closest from 'closest';
 const inputs = document.querySelectorAll('.field-file__input:not([disabled])');
 Array.prototype.forEach.call(inputs, (input) => {
   const label = closest(input, '.field-file').querySelector(
-    '.field-file__name-text'
+    '.field-file__name-text',
   );
   const labelVal = label.innerHTML;
 
@@ -18,7 +18,7 @@ Array.prototype.forEach.call(inputs, (input) => {
     if (this.files && this.files.length > 1) {
       fileName = (this.getAttribute('data-multiple-caption') || '').replace(
         '{count}',
-        this.files.length
+        this.files.length,
       );
     } else {
       fileName = e.target.value.split('\\').pop();

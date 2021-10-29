@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import '@components/baron';
 import '@components/burger';
 import '@components/field-file';
