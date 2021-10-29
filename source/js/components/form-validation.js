@@ -36,14 +36,14 @@ forms.forEach((form) => {
     let valid = true;
     // Проверим все текстовые инпуты
     const fieldsText = Array.from(
-      form.querySelectorAll('input[data-check-pattern]')
+      form.querySelectorAll('input[data-check-pattern]'),
     );
     fieldsText.forEach((input) => {
       if (!checkFieldText(input)) valid = false;
     });
     // Проверим все чекбоксы
     const fieldsCheckbox = Array.from(
-      form.querySelectorAll('input[data-check-state]')
+      form.querySelectorAll('input[data-check-state]'),
     );
     fieldsCheckbox.forEach((input) => {
       if (!checkFieldCheckbox(input)) valid = false;
@@ -55,7 +55,7 @@ forms.forEach((form) => {
 
 // Для всех проверяемых текстовых полей
 const fieldsText = Array.from(
-  document.querySelectorAll('input[data-check-pattern]')
+  document.querySelectorAll('input[data-check-pattern]'),
 );
 fieldsText.forEach((input) => {
   let hasBeenAlreadyBlured = false;
@@ -70,7 +70,7 @@ fieldsText.forEach((input) => {
 
 // Для всех проверяемых чекбоксов
 const fieldsCheckbox = Array.from(
-  document.querySelectorAll('input[data-check-state]')
+  document.querySelectorAll('input[data-check-state]'),
 );
 fieldsCheckbox.forEach((input) => {
   input.addEventListener('change', () => {

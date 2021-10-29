@@ -9,7 +9,7 @@ function getParents(elem, selector) {
       Element.prototype.webkitMatchesSelector ||
       function (s) {
         const matches = (this.document || this.ownerDocument).querySelectorAll(
-          s
+          s,
         );
         let i = matches.length;
         while (--i >= 0 && matches.item(i) !== this) {} // eslint-disable-line
@@ -53,7 +53,7 @@ document.addEventListener(
       }
     }
   },
-  true
+  true,
 );
 // Слежение за всплывшим событием blur (нужно убрать класс, показывающий потомков)
 document.addEventListener(
@@ -68,5 +68,5 @@ document.addEventListener(
       }
     }
   },
-  true
+  true,
 );

@@ -1,11 +1,10 @@
-// eslint-disable-next-line import/no-unresolved
 import getScrollSize from '@utils/getScrollSize.js';
 
 const bodyPaddingRightOriginal = parseInt(
   window
     .getComputedStyle(document.body, null)
     .getPropertyValue('padding-right'),
-  10
+  10,
 );
 const backdrop = document.createElement('div');
 
@@ -49,8 +48,8 @@ document.addEventListener('click', (event) => {
   if (target && target.dataset.modal === 'open') {
     showModal(
       document.getElementById(
-        (target.hash || target.dataset.modalTarget).slice(1)
-      )
+        (target.hash || target.dataset.modalTarget).slice(1),
+      ),
     );
   }
 
