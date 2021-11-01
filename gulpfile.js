@@ -158,5 +158,5 @@ const copy = () => {
     .pipe(gulp.dest('build'));
 };
 
-gulp.task('build', gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp));
+gulp.task('build', gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp, images));
 gulp.task('default', gulp.series('build', server));
