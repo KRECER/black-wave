@@ -11,6 +11,10 @@ const SliderOption = {
       delay: 3000,
     },
   },
+  'team-slider': {
+    slidesPerView: 'auto',
+    spaceBetween: 90,
+  },
 };
 
 const sliders = document.querySelectorAll('.js-slider');

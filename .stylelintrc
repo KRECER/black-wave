@@ -155,9 +155,9 @@
     "color-no-invalid-hex": [true, {
       "message": "HEX цвета правильно написаны быть должны"
     }],
-    "font-family-name-quotes": ["always-where-recommended", {
-      "message": "В кавычки шрифта название брать следует"
-    }],
+    # "font-family-name-quotes": ["always-where-recommended", {
+    #   "message": "В кавычки шрифта название брать следует"
+    # }],
     "font-family-no-duplicate-names": [true, {
       "message": "Шрифтов название повторять не следует"
     }],

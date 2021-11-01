@@ -1,0 +1,19 @@
+.our-history-section {
+  color: #fff;
+  background: #000 url('../images/our-history-section__bg.png') no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    column-gap: 110px;
+  }
+
+  &__left-wrap {
+    max-width: 624px;
+  }
+
+  &__title {
+    margin-bottom: 195px;
+  }
+}

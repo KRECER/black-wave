@@ -20,6 +20,8 @@ const path = require('path');
 const sassGlob = require('gulp-sass-glob');
 const inlineSVG = require('postcss-inline-svg');
 const ghpages = require('gh-pages');
+const notify = require('gulp-notify');
+
 const webpackConfig = require('./webpack.config');
 
 // Настройки бьютификатора HTML
@@ -86,10 +88,13 @@ const server = () => {
 
 const styles = () => {
   return gulp.src('source/scss/style.scss', { sourcemaps: true })
-    .pipe(plumber())
     .pipe(debug({ title: 'Compiles:' }))
     .pipe(sassGlob())
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', notify.onError(function (error) {
+      return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
+    })))
     .pipe(postcss(postCssPlugins))
     .pipe(gulp.dest('build/css'))
     .pipe(csso({
@@ -138,7 +143,8 @@ const html = () => {
   return gulp.src('source/*.html')
     .pipe(posthtml([include({ root: 'source' })]))
     .pipe(prettyhtml(prettyOption))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('build/'))
+    .pipe(sync.stream());
 };
 
 const copy = () => {
@@ -146,10 +152,11 @@ const copy = () => {
     'source/fonts/**/*.{woff,woff2}',
     'source/images/**',
     '!source/images/icons/**',
+    '!source/images/temp/**',
     'source/*.ico',
   ], { base: 'source' })
     .pipe(gulp.dest('build'));
 };
 
-gulp.task('build', gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp));
+gulp.task('build', gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp, images));
 gulp.task('default', gulp.series('build', server));
