@@ -37,6 +37,14 @@
   flex-direction: column;
   min-height: 100vh;
   padding-left: 200px;
+
+  @media (min-width: $screen-sm) and (max-width: 1350px) {
+    padding-left: 124px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-left: 65px;
+  }
 }
 
 .page__content {
@@ -267,6 +275,17 @@ blockquote {
   margin: 0 auto;
   padding-left: 174px;
   padding-right: 30px;
+}
+
+.container--header {
+
+  @media (min-width: 680px) and (max-width: 1350px) {
+    padding-left: 145px;
+  }
+  
+  @media (max-width: 680px) {
+    padding-left: 30px;
+  }
 }
 
 .container--standart {

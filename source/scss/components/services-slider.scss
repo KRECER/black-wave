@@ -5,12 +5,28 @@
 
 .services-slider__inner {
   padding-right: 209px;
+
+  @media (min-width: 1520px) and (max-width: 1640px) {
+    padding-right: 150px;
+  }
+
+  @media (min-width: 1000px) and (max-width: 1520px) {
+    padding-right: 130px;
+  }
+
+  @media (max-width: 1000px) {
+    padding-right: 110px;
+  }
 }
 
 .services-slider__top-wrap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 33px;
+
+  @media (max-width: $screen-md) {
+    margin-bottom: 20px;
+  }
 }
 
 .services-slider__title {
@@ -42,11 +58,21 @@
   margin-bottom: 15px;
   font-size: 29px;
   line-height: 32px;
+
+  @media (max-width: 1250px) {
+    font-size: 25px;
+    line-height: 27px;
+  }
 }
 
 .services-slider__item-description {
   margin-bottom: 48px;
   color: #a8a8a8;
+
+  @media (max-width: 1250px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
 
 .services-slider__item-link {
@@ -72,6 +98,10 @@
   position: absolute;
   right: 0;
   bottom: 30px;
+
+  @media (max-width: $screen-md) {
+    bottom: 22px;
+  }
 }
 
 .services-slider__current-slide-number {

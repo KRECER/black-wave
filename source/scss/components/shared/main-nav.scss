@@ -18,6 +18,26 @@
   font-size: 100px;
   line-height: 75px;
   color: #fff;
+
+  @media (min-width: $screen-xl) and (max-width: $screen-xxl) {
+    font-size: 60px;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    font-size: 50px;
+  }
+
+  @media (min-width: $screen-sm) and (max-width: $screen-md) {
+    font-size: 45px;
+  }
+
+  @media (min-width: 320px) and (max-width: $screen-sm) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 32px;
+  }
 }
 
 .main-nav--opened {
@@ -38,6 +58,20 @@
   max-height: 920px;
   padding: 150px;
   gap: 190px;
+
+  @media (min-width: $screen-lg) and (max-width: $screen-xxl) {
+    gap: 120px;
+  }
+
+  @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+    padding: 75px;
+    gap: 0;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 30px;
+    gap: 0;
+  }
 }
 
 .main-nav__link {
