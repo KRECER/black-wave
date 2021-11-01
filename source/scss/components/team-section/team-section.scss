@@ -1,0 +1,14 @@
+.team-section {
+
+  &__inner {
+    position: relative;
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  &__title {
+    position: absolute;
+    left: 526px;
+    top: 200px;
+  }
+}

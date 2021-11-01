@@ -3,10 +3,33 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-header {
+  $component-name: &;
+
   min-height: 100vh;
   background: #000 url('../images/bg-page-header.jpg') no-repeat top center;
   background-size: cover;
   color: #fff;
+
+  &--inner {
+    min-height: auto;
+    background-image: url('../images/inner-page-header__background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    #{$component-name}__inner {
+      min-height: auto;
+      padding-bottom: 110px;
+    }
+
+    #{$component-name}__content {
+      margin-bottom: 0;
+    }
+
+    #{$component-name}__title {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .page-header__inner {
