@@ -4,10 +4,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .baron {
+  $block-name: &; // #{$block-name}__element
 
-  $block-name:                &; // #{$block-name}__element
-
-  $scrollbar-width:           14px;
+  $scrollbar-width: 14px;
 
   position: relative;
   overflow: hidden;

@@ -1,0 +1,95 @@
+.team-slider {
+
+  &__btns-wrap {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 85px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      width: 54px;
+      height: 20px;
+      margin-top: 0;
+      font-size: 0;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      width: 100%;
+      height: 9px;
+      font-size: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .swiper-button-prev::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='54' height='9' viewBox='0 0 54 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 8.5L2 8.5L9.5 1' stroke='black'/%3E%3C/svg%3E%0A");
+    }
+
+    .swiper-button-next::after {
+      position: relative;
+      bottom: -6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='54' height='9' viewBox='0 0 54 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1L52 1L44.5 8.5' stroke='black'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 124px;
+    width: 100%;
+    max-width: 1200px;
+
+    &-info-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      width: 407px;
+      height: 610px;
+
+      img {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-width: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-info-content {
+      position: relative;
+      z-index: 1;
+      padding: 35px;
+      color: #fff;
+      background-color: rgba(#000, 0.8);
+
+      b {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 38px;
+      }
+    }
+
+    &-info-position {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 25px;
+    }
+
+    &-descr-wrap {
+      padding-top: 335px;
+
+      p {
+        font-size: 23px;
+        line-height: 40px;
+      }
+    }
+  }
+}
