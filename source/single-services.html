@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Edge и ряд мобильных браузеров слишком умны. Отключим это. -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+
+  <!-- Предзагрузка шрифтов или иных ресурсов -->
+  <!-- <link rel="preload" href="fonts/Bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <title>Single Services</title>
+</head>
+
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <include src="template-parts/inner-page-header.html"></include>
+
+      <main class="page__main">
+        <div class="container">
+          <h1 class="page__title section-title">Landing Page</h1>
+        </div>
+        <div class="container container--standart">
+          <ul class="menu-categories">
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Дизайн
+              </a>
+            </li>
+            <li class="menu-categories__item menu-categories__item--active">
+              <a class="menu-categories__link" href="#">
+                Разработка сайтов
+              </a>
+              <ul class="menu-categories__sublist">
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Landing Page
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Сайт компании
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Интернет-каталог
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Корпоративный сайт
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Интернет-магазин
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Разработка логотипа
+              </a>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Продвижение сайта
+              </a>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Поддержка сайта
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrap">
+      <include src="template-parts/page-footer.html"></include>
+      <a class="to-top to-top--visible" id="to-top" href="#">↑</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/main.min.js"></script> -->
+</body>
+
+</html>
