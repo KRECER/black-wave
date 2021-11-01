@@ -10,11 +10,9 @@
     "url": "https://github.com/KRECER/gulp-starter_kit.git"
   },
   "scripts": {
-    "test": "npm run test:style && npm run test:js && npm run test:prettier",
+    "test": "npm run test:style && npm run test:js",
     "test:style": "npx stylelint \"source/scss/**/*.scss\" --syntax=scss --color",
     "test:js": "npx eslint source/js/**/*.js --fix",
-    "test:prettier": "npx prettier --check source/js/**/*.js",
-    "make-prettier": "npx prettier --write source/js/**/*.js",
     "start": "cross-env MODE=development npx gulp",
     "build": "cross-env MODE=production npx gulp build",
     "prepare": "npx husky install",
