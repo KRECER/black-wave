@@ -27,7 +27,8 @@
         "extensions": [".js"],
         "alias": {
           "@utils": "./source/js/utils",
-          "@components": "./source/js/components"
+          "@components": "./source/js/components",
+          "@app": "./source"
         }
       }
     }

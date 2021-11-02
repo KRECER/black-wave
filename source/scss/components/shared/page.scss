@@ -33,6 +33,15 @@
 }
 
 .page__inner {
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 124px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 64px;
+  }
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -262,8 +271,30 @@ blockquote {
 }
 
 .container {
+
+  @include media-breakpoint-down(xxl) {
+    max-width: $container-xxl;
+  }
+
+  @include media-breakpoint-down(xl) {
+    max-width: $container-xl;
+    padding-left: 140px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    max-width: $container-lg;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: $container-md;
+    padding-left: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: $container-md;
+    padding-left: 30px;
+  }
   width: 100%;
-  max-width: 1760px;
   margin: 0 auto;
   padding-left: 174px;
   padding-right: 30px;

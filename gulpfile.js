@@ -12,7 +12,7 @@ const svgstore = require('gulp-svgstore');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const del = require('del');
-const mqpacker = require('css-mqpacker');
+const sortMQ = require('postcss-sort-media-queries');
 const prettyhtml = require('gulp-pretty-html');
 const webpackStream = require('webpack-stream');
 const debug = require('gulp-debug');
@@ -34,10 +34,8 @@ let prettyOption = {
 
 // Список и настройки плагинов postCSS
 let postCssPlugins = [
-  autoprefixer({grid: true}),
-  mqpacker({
-    sort: true
-  }),
+  autoprefixer({ grid: true }),
+  sortMQ({ sort: 'desktop-first' }),
   inlineSVG(),
 ];
 
@@ -51,7 +49,8 @@ const clean = () => {
 };
 
 const copyImages = () => {
-  return gulp.src('source/images/*.{jpg,jpeg,png,gif,svg,webp}')
+  return gulp
+    .src('source/images/*.{jpg,jpeg,png,gif,svg,webp}')
     .pipe(gulp.dest('build/images'));
 };
 
@@ -72,43 +71,57 @@ const server = () => {
   });
 
   gulp.watch('source/scss/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/js/**/*.js', gulp.series(scripts));
   gulp.watch('source/**/*.html', gulp.series(html, reload));
   gulp.watch(
     ['source/images/*.{jpg,jpeg,png,gif,svg,webp}'],
-    { events: ['all'], delay: 100, },
+    { events: ['all'], delay: 100 },
     gulp.series(copyImages, reload),
   );
   gulp.watch(
     ['source/images/icons/*.svg'],
-    { events: ['all'], delay: 100, },
-    gulp.series(sprite, reload)
+    { events: ['all'], delay: 100 },
+    gulp.series(sprite, reload),
   );
 };
 
 const styles = () => {
-  return gulp.src('source/scss/style.scss', { sourcemaps: true })
+  return gulp
+    .src('source/scss/style.scss', { sourcemaps: true })
     .pipe(debug({ title: 'Compiles:' }))
     .pipe(sassGlob())
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', notify.onError(function (error) {
-      return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
-    })))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+      }).on(
+        'error',
+        notify.onError(function (error) {
+          return (
+            'An error occurred while compiling sass.\nLook in the console for details.\n' +
+            error
+          );
+        }),
+      ),
+    )
     .pipe(postcss(postCssPlugins))
     .pipe(gulp.dest('build/css'))
-    .pipe(csso({
-      restructure: false,
-    }))
-    .pipe(rename({
-      suffix: '.min',
-    }))
+    .pipe(
+      csso({
+        restructure: false,
+      }),
+    )
+    .pipe(
+      rename({
+        suffix: '.min',
+      }),
+    )
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(sync.stream());
 };
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp
+    .src('source/js/script.js')
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig))
     .pipe(gulp.dest('build/js'))
@@ -116,31 +129,37 @@ const scripts = () => {
 };
 
 const images = () => {
- return gulp.src('source/images/**/*.{jpg,png,svg}')
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.mozjpeg({progressive: true}),
-    imagemin.svgo(),
-  ]))
-  .pipe(gulp.dest('build/images'));
+  return gulp
+    .src('source/images/**/*.{jpg,png,svg}')
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo(),
+      ]),
+    )
+    .pipe(gulp.dest('build/images'));
 };
 exports.images = images;
 
 const generateToWebp = () => {
- return gulp.src('source/images/**/*.{png,jpg}')
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest('build/images'));
+  return gulp
+    .src('source/images/**/*.{png,jpg}')
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest('build/images'));
 };
 
 const sprite = () => {
-  return gulp.src('source/images/icons/*.svg')
+  return gulp
+    .src('source/images/icons/*.svg')
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/images'));
 };
 
 const html = () => {
-  return gulp.src('source/*.html')
+  return gulp
+    .src('source/*.html')
     .pipe(posthtml([include({ root: 'source' })]))
     .pipe(prettyhtml(prettyOption))
     .pipe(gulp.dest('build/'))
@@ -148,15 +167,31 @@ const html = () => {
 };
 
 const copy = () => {
-  return gulp.src([
-    'source/fonts/**/*.{woff,woff2}',
-    'source/images/**',
-    '!source/images/icons/**',
-    '!source/images/temp/**',
-    'source/*.ico',
-  ], { base: 'source' })
+  return gulp
+    .src(
+      [
+        'source/fonts/**/*.{woff,woff2}',
+        'source/images/**',
+        '!source/images/icons/**',
+        '!source/images/temp/**',
+        'source/*.ico',
+      ],
+      { base: 'source' },
+    )
     .pipe(gulp.dest('build'));
 };
 
-gulp.task('build', gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp, images));
+gulp.task(
+  'build',
+  gulp.series(
+    clean,
+    copy,
+    html,
+    styles,
+    scripts,
+    sprite,
+    generateToWebp,
+    images,
+  ),
+);
 gulp.task('default', gulp.series('build', server));
