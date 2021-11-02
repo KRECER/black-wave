@@ -6,8 +6,7 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src:
-    url('../fonts/gilroy/gilroy-light.woff') format('woff'),
+  src: url('../fonts/gilroy/gilroy-light.woff') format('woff'),
     url('../fonts/gilroy/gilroy-light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src:
-    url('../fonts/gilroy/gilroy-extrabold.woff') format('woff'),
+  src: url('../fonts/gilroy/gilroy-extrabold.woff') format('woff'),
     url('../fonts/gilroy/gilroy-extrabold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
@@ -50,6 +48,10 @@
 
 .page__content {
   flex-grow: 1;
+}
+
+.page__title {
+  margin-bottom: 100px;
 }
 
 .page__footer-wrap {
@@ -271,6 +273,8 @@ blockquote {
 }
 
 .container {
+  width: 100%;
+  max-width: $container-xxl;
 
   @include media-breakpoint-down(xxl) {
     max-width: $container-xxl;
@@ -302,6 +306,14 @@ blockquote {
 
 .container--standart {
   padding-left: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .page-section {

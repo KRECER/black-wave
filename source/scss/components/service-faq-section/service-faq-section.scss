@@ -1,0 +1,17 @@
+.service-faq-section {
+  $component-name: &;
+
+  margin-bottom: 100px;
+  color: #fff;
+  background-color: #000;
+
+  &__inner {
+    max-width: 1345px;
+  }
+
+  #{$component-name} &__title {
+    margin-bottom: 108px;
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
