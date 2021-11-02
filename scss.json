@@ -1,0 +1,22 @@
+{
+  "_xxl": {
+    "prefix": "_xxl",
+    "body": ["@include media-breakpoint-down(xxl) {", "t$0", "}"],
+    "description": "Media Queries"
+  },
+  "_xl": {
+    "prefix": "_xl",
+    "body": ["@include media-breakpoint-down(xl) {", "t$0", "}"],
+    "description": "Media Queries"
+  },
+  "_md": {
+    "prefix": "_md",
+    "body": ["@include media-breakpoint-down(md) {", "t$0", "}"],
+    "description": "Media Queries"
+  },
+  "_sm": {
+    "prefix": "_sm",
+    "body": ["@include media-breakpoint-down(sm) {", "t$0", "}"],
+    "description": "Media Queries"
+  }
+}

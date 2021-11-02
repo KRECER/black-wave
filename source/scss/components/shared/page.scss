@@ -307,6 +307,11 @@ blockquote {
 .page-section {
   padding-top: 207px;
   padding-bottom: 157px;
+
+  @include media-breakpoint-down (sm) {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
 }
 
 .section-title {
