@@ -1,0 +1,23 @@
+.service-creation-steps-section {
+
+  &__title {
+    margin-bottom: 200px;
+    font-size: 65px;
+    line-height: 65px;
+  }
+
+  &__list-wrap {
+    display: flex;
+    column-gap: 75px;
+    margin-bottom: 130px;
+  }
+
+  &__order-btn-wrap {
+    text-align: center;
+
+    button {
+      width: 100%;
+      max-width: 418px;
+    }
+  }
+}

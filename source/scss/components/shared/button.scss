@@ -53,3 +53,12 @@
   background-color: #fff;
   border: 1px solid var(--accent-color);
 }
+
+.button--full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.button--square {
+  border-radius: 0;
+}
