@@ -13,6 +13,7 @@ import '@components/tabs';
 import '@components/to-top';
 import '@components/modal';
 import '@components/slider';
+import '@components/dynamic-adapt';
 
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
