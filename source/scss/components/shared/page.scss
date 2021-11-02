@@ -305,6 +305,12 @@ blockquote {
 }
 
 .page-section {
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   padding-top: 207px;
   padding-bottom: 157px;
 }
