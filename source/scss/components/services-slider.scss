@@ -4,6 +4,11 @@
 }
 
 .services-slider__inner {
+
+  @include media-breakpoint-down(xxl) {
+    padding-right: 110px;
+  }
+
   padding-right: 209px;
 }
 
@@ -45,6 +50,12 @@
 }
 
 .services-slider__item-description {
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
   margin-bottom: 48px;
   color: #a8a8a8;
 }
