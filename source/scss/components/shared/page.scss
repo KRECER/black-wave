@@ -283,11 +283,11 @@ blockquote {
 
   @include media-breakpoint-down(lg) {
     max-width: $container-lg;
+    padding-left: 50px;
   }
 
   @include media-breakpoint-down(md) {
     max-width: $container-md;
-    padding-left: 30px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -333,7 +333,7 @@ blockquote {
   font-size: 100px;
   line-height: 100px;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     font-size: 70px;
     line-height: 75px;
   }
