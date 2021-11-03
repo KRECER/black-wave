@@ -1,4 +1,4 @@
-.portfolio-section {
+.latest-projects-section {
 
   @include media-breakpoint-down(md) {
     padding-top: 80px;
@@ -7,7 +7,7 @@
   padding-top: 207px;
 }
 
-.portfolio-section__header {
+.latest-projects-section__header {
 
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;
@@ -19,7 +19,7 @@
   margin-bottom: 100px;
 }
 
-.portfolio-section__link-to-all {
+.latest-projects-section__link-to-all {
 
   @include media-breakpoint-down(md) {
     margin-left: auto;
@@ -35,26 +35,26 @@
   color: $color-main;
 }
 
-.portfolio-section__link-to-all:hover {
+.latest-projects-section__link-to-all:hover {
   border-left-color: #d9b94e;
   color: #d9b94e;
   text-decoration: none;
 }
 
-.portfolio-section__link-to-all::after {
+.latest-projects-section__link-to-all::after {
   top: 0;
   bottom: 0;
   background-color: $color-main;
 }
 
-.portfolio-section__link-to-all::before {
+.latest-projects-section__link-to-all::before {
   bottom: 0;
   height: calc(50vmin);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-section__link-to-all::before,
-.portfolio-section__link-to-all::after {
+.latest-projects-section__link-to-all::before,
+.latest-projects-section__link-to-all::after {
 
   @include media-breakpoint-down(md) {
     left: 100%;
@@ -67,7 +67,7 @@
 }
 
 
-.portfolio-section__list {
+.latest-projects-section__list {
 
   @include media-breakpoint-down(lg) {
     grid-template-columns: repeat(2, 1fr);
@@ -84,11 +84,11 @@
   grid-auto-flow: column row;
 }
 
-.portfolio-section__list-item .portfolio-item {
+.latest-projects-section__list-item .project-item {
   height: 100%;
 }
 
-.portfolio-section__list-item:first-child {
+.latest-projects-section__list-item:first-child {
 
   @include media-breakpoint-down(lg) {
     grid-column: auto;
@@ -99,7 +99,7 @@
   grid-row: span 2;
 }
 
-.portfolio-section__list-item:last-child {
+.latest-projects-section__list-item:last-child {
 
   @include media-breakpoint-down(lg) {
     grid-column: auto;

@@ -1,4 +1,4 @@
-.portfolio-item {
+.project-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10,7 +10,7 @@
   padding-bottom: 50px;
 }
 
-.portfolio-item__link {
+.project-item__link {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -19,7 +19,7 @@
   left: 0;
 }
 
-.portfolio-item::after {
+.project-item::after {
   content: '';
   position: absolute;
   z-index: 0;
@@ -30,16 +30,16 @@
   transition: mix-blend-mode 0.3s;
 }
 
-.portfolio-item:hover::after {
+.project-item:hover::after {
   background: $color-main;
   mix-blend-mode: color;
 }
 
-.portfolio-item:hover .portfolio-item__title {
+.project-item:hover .project-item__title {
   text-decoration: underline;
 }
 
-.portfolio-item__background {
+.project-item__background {
   position: absolute;
   top: 0;
   right: 0;
@@ -50,12 +50,12 @@
   object-fit: cover;
 }
 
-.portfolio-item__content {
+.project-item__content {
   position: relative;
   z-index: 1;
 }
 
-.portfolio-item__date {
+.project-item__date {
   display: inline-block;
   margin-bottom: 5px;
   font-family: '"Roboto"', Arial, sans-serif;
@@ -66,7 +66,7 @@
   letter-spacing: 0.02em;
 }
 
-.portfolio-item__title {
+.project-item__title {
 
   @include media-breakpoint-down(xl) {
     font-size: 35px;

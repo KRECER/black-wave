@@ -183,15 +183,6 @@ const copy = () => {
 
 gulp.task(
   'build',
-  gulp.series(
-    clean,
-    copy,
-    html,
-    styles,
-    scripts,
-    sprite,
-    generateToWebp,
-    images,
-  ),
+  gulp.series(clean, copy, html, styles, scripts, sprite, generateToWebp),
 );
 gulp.task('default', gulp.series('build', server));
