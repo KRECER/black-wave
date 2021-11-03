@@ -11,6 +11,7 @@
   color: #fff;
 
   &--inner {
+
     min-height: auto;
     margin-bottom: 160px;
     background-image: url('../images/inner-page-header__background.jpg');
@@ -34,6 +35,15 @@
 }
 
 .page-header__inner {
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
