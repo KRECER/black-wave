@@ -55,11 +55,11 @@
 }
 
 .feedback-form__footer-submit-btn:hover {
-  color: var(--accent-color);
+  color: $color-main;
   background-color: #fff;
-  border-color: var(--accent-color);
+  border-color: $color-main;
 }
 
 .feedback-form__footer-submit-btn:hover svg {
-  fill: var(--accent-color);
+  fill: $color-main;
 }
