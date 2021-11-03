@@ -1,0 +1,33 @@
+.service-advantages-section {
+  color: #fff;
+  background-image: url('../images/service-advantages-section__bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    column-gap: 62px;
+  }
+
+  &__item {
+    max-width: 636px;
+    padding: 70px 50px;
+    border: 1px solid rgba(168, 152, 97, 0.5);
+    backdrop-filter: blur(15px);
+
+    &-title {
+      margin-bottom: 75px;
+      color: $color-main;
+      font-size: 35px;
+      line-height: 45px;
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+  }
+}
