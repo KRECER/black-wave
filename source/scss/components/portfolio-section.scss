@@ -1,8 +1,18 @@
 .portfolio-section {
+
+  @include media-breakpoint-down(md) {
+    padding-top: 80px;
+  }
+
   padding-top: 207px;
 }
 
 .portfolio-section__header {
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,6 +20,12 @@
 }
 
 .portfolio-section__link-to-all {
+
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+    padding-right: 20px;
+  }
+
   position: relative;
   padding-left: 20px;
   padding-top: 3px;
@@ -26,30 +42,46 @@
 }
 
 .portfolio-section__link-to-all::after {
-  content: '';
-  position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 1px;
   background-color: $color-main;
 }
 
 .portfolio-section__link-to-all::before {
-  content: '';
-  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 1px;
-  height: calc(100% + 27vmin);
+  height: calc(50vmin);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.portfolio-section__link-to-all::before,
+.portfolio-section__link-to-all::after {
+
+  @include media-breakpoint-down(md) {
+    left: 100%;
+  }
+
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1px;
+}
+
+
 .portfolio-section__list {
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 424px);
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 400px);
   grid-gap: 2px;
+  grid-auto-flow: column row;
 }
 
 .portfolio-section__list-item .portfolio-item {
@@ -57,11 +89,21 @@
 }
 
 .portfolio-section__list-item:first-child {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+
+  @include media-breakpoint-down(lg) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  grid-column: span 1;
+  grid-row: span 2;
 }
 
 .portfolio-section__list-item:last-child {
-  grid-column: 3 / 5;
-  grid-row: 2 / 3;
+
+  @include media-breakpoint-down(lg) {
+    grid-column: auto;
+  }
+
+  grid-column: span 2;
 }

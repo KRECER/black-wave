@@ -70,9 +70,9 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0;
-  font-family: 'Gilroy', Arial, Tahoma, sans-serif;
+  font-family: $font-family;
   font-weight: 800;
-  font-size: 16px;
+  font-size: $font-size;
   text-align: left;
   line-height: 23px;
   overflow-x: hidden;
@@ -230,6 +230,13 @@ h6 {
   color: currentColor;
 }
 
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
 p,
 ul,
 ol,
@@ -331,11 +338,9 @@ blockquote {
 
 .section-title {
   font-size: 100px;
-  line-height: 100px;
 
   @include media-breakpoint-down(lg) {
     font-size: 70px;
-    line-height: 75px;
   }
 
   @include media-breakpoint-down(sm) {
