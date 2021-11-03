@@ -48,7 +48,7 @@
 }
 
 .services-section__list-item-link:hover {
-  color: var(--accent-color);
+  color: $color-main;
   -webkit-text-stroke-color: transparent;
   text-decoration: none;
 }

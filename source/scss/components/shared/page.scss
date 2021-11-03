@@ -1,9 +1,5 @@
 /* stylelint-disable */
 
-:root {
-  --accent-color: #a89861;
-}
-
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/gilroy/gilroy-light.woff') format('woff'),
@@ -182,7 +178,7 @@ hr {
   height: 0; /* Проблема Firefox */
   overflow: visible; /* Проблема Edge и IE */
   border: 0;
-  border-top: 1px solid var(--accent-color);
+  border-top: 1px solid $color-main;
 }
 
 button {
@@ -295,9 +291,10 @@ blockquote {
   }
 
   @include media-breakpoint-down(sm) {
-    max-width: $container-md;
+    max-width: $container-sm;
     padding-left: 30px;
   }
+
   width: 100%;
   margin: 0 auto;
   padding-left: 174px;
@@ -319,11 +316,25 @@ blockquote {
 .page-section {
   padding-top: 207px;
   padding-bottom: 157px;
+
+  @include media-breakpoint-down (sm) {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
 }
 
 .section-title {
   font-size: 100px;
   line-height: 100px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 70px;
+    line-height: 75px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 40px;
+  }
 }
 
 .no-scroll {
