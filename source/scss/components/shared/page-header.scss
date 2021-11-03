@@ -11,7 +11,9 @@
   color: #fff;
 
   &--inner {
+
     min-height: auto;
+    margin-bottom: 160px;
     background-image: url('../images/inner-page-header__background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,6 +35,15 @@
 }
 
 .page-header__inner {
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,8 +67,8 @@
   position: fixed;
   z-index: 101;
   left: 0;
-  min-height: 100vh;
   width: 200px;
+  min-height: 100vh;
   border-right: 1px solid #8b979a;
   background-color: #000;
 }
@@ -69,7 +80,7 @@
   right: -1px;
   width: 1px;
   height: 196px;
-  background-color: var(--accent-color);
+  background-color: $color-main;
 }
 
 .page-header__top {
@@ -227,13 +238,13 @@
     font-size: 15px;
   }
 
-  border-left: 1px solid var(--accent-color);
+  border-left: 1px solid $color-main;
   padding-left: 20px;
   font-size: 19px;
   line-height: 40px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: $color-main;
   transition: border-left-color 0.3s;
 }
 
@@ -247,8 +258,8 @@
 
   @include media-breakpoint-down(xl) {
     position: relative;
-    right: calc(100% + 40px);
     top: 120px;
+    right: calc(100% + 40px);
   }
 
   @include media-breakpoint-down(md) {

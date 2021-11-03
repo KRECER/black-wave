@@ -1,0 +1,45 @@
+.service-description-section {
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 160px;
+  }
+
+  &__left-wrap {
+    max-width: 630px;
+
+    p {
+      margin-bottom: 50px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 221px;
+  }
+
+  &__right-wrap {
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -205px;
+      left: -204px;
+      width: 470px;
+      height: 470px;
+      background-image: url('../images/service-description-section__right-bg-triangle.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

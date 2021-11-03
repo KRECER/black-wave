@@ -7,12 +7,13 @@
   max-width: 100%;
   overflow: hidden;
   border: 1px solid transparent;
-  padding: 19px 53px;
+  padding: 13px 35px;
   transition: background-color 0.3s;
   border-radius: 1000px;
   color: #000;
-  font-size: 1em;
-  font-family: inherit;
+  font-size: 19px;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
   text-decoration: none;
   text-transform: none;
   letter-spacing: 0.02em;
@@ -30,7 +31,7 @@
 .button:focus {
   color: #fff;
   text-decoration: none;
-  background-color: var(--accent-color);
+  background-color: $color-main;
 }
 
 .button--white {
@@ -45,11 +46,20 @@
 
 .button--accent {
   color: #fff;
-  background-color: var(--accent-color);
+  background-color: $color-main;
 }
 
 .button--accent:hover {
   color: #000;
   background-color: #fff;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $color-main;
+}
+
+.button--full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.button--square {
+  border-radius: 0;
 }

@@ -34,7 +34,7 @@
   padding-bottom: 3px;
   font-size: 19px;
   line-height: 40px;
-  color: var(--accent-color);
+  color: $color-main;
 }
 
 .portfolio-section__link-to-all:hover {
@@ -55,7 +55,7 @@
   bottom: 0;
   left: 0;
   width: 1px;
-  background-color: var(--accent-color);
+  background-color: $color-main;
 }
 
 .portfolio-section__link-to-all::before {

@@ -31,7 +31,7 @@
 }
 
 .portfolio-item:hover::after {
-  background: var(--accent-color);
+  background: $color-main;
   mix-blend-mode: color;
 }
 

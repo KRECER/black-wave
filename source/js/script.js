@@ -14,6 +14,7 @@ import '@components/to-top';
 import '@components/modal';
 import '@components/slider';
 import '@components/dynamic-adapt';
+import '@components/accordion';
 
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');

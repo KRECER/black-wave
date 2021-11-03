@@ -1,13 +1,8 @@
 /* stylelint-disable */
 
-:root {
-  --accent-color: #a89861;
-}
-
 @font-face {
   font-family: 'Gilroy';
-  src:
-    url('../fonts/gilroy/gilroy-light.woff') format('woff'),
+  src: url('../fonts/gilroy/gilroy-light.woff') format('woff'),
     url('../fonts/gilroy/gilroy-light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
@@ -16,8 +11,7 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src:
-    url('../fonts/gilroy/gilroy-extrabold.woff') format('woff'),
+  src: url('../fonts/gilroy/gilroy-extrabold.woff') format('woff'),
     url('../fonts/gilroy/gilroy-extrabold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
@@ -50,6 +44,10 @@
 
 .page__content {
   flex-grow: 1;
+}
+
+.page__title {
+  margin-bottom: 100px;
 }
 
 .page__footer-wrap {
@@ -180,7 +178,7 @@ hr {
   height: 0; /* Проблема Firefox */
   overflow: visible; /* Проблема Edge и IE */
   border: 0;
-  border-top: 1px solid var(--accent-color);
+  border-top: 1px solid $color-main;
 }
 
 button {
@@ -271,6 +269,8 @@ blockquote {
 }
 
 .container {
+  width: 100%;
+  max-width: $container-xxl;
 
   @include media-breakpoint-down(xxl) {
     max-width: $container-xxl;
@@ -283,17 +283,18 @@ blockquote {
 
   @include media-breakpoint-down(lg) {
     max-width: $container-lg;
+    padding-left: 50px;
   }
 
   @include media-breakpoint-down(md) {
     max-width: $container-md;
-    padding-left: 30px;
   }
 
   @include media-breakpoint-down(sm) {
-    max-width: $container-md;
+    max-width: $container-sm;
     padding-left: 30px;
   }
+
   width: 100%;
   margin: 0 auto;
   padding-left: 174px;
@@ -304,14 +305,42 @@ blockquote {
   padding-left: 15px;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .page-section {
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   padding-top: 207px;
   padding-bottom: 157px;
+
+  @include media-breakpoint-down (sm) {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
 }
 
 .section-title {
   font-size: 100px;
   line-height: 100px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 70px;
+    line-height: 75px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 40px;
+  }
 }
 
 .no-scroll {
