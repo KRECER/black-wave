@@ -1,0 +1,94 @@
+.not-found {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 100vh;
+
+  &__inner {
+    padding-top: 130px;
+  }
+
+  &__title {
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 300px;
+    }
+
+    padding-left: 75px;
+    font-size: 400px;
+
+    span {
+      color: #4d4d4d;
+    }
+  }
+
+  &__penis-img {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    object-fit: contain;
+  }
+
+  &__info {
+    margin-bottom: 80px;
+    color: $color-main;
+    font-size: 35px;
+    line-height: 25px;
+  }
+
+  &__link-to-home {
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 50px;
+    }
+    display: inline-block;
+
+    position: relative;
+    transform: rotate(-5.5deg);
+    padding-left: 75px;
+    font-size: 80px;
+    line-height: 98px;
+    text-decoration: none;
+    color: #000000;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 58px;
+      height: 37px;
+      transform: translateY(-50%);
+      background-image: svg-load('images/triangle.svg', fill=#000);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image 0.3s;
+    }
+
+    span {
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 13px;
+        width: 89%;
+        height: 4px;
+        background-color: #000;
+        transition: background-color 0.3s;
+      }
+    }
+
+    &:hover {
+
+      text-decoration: none;
+
+      & span::before {
+        background-color: $color-main;
+      }
+
+      &::after {
+        background-image: svg-load('images/triangle.svg', fill=$color-main);
+      }
+    }
+  }
+}
