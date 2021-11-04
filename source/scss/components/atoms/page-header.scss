@@ -4,8 +4,9 @@
 
 .page-header {
   $component-name: &;
-
   min-height: 100vh;
+
+  overflow: hidden;
   background: #000 url('../images/bg-page-header.jpg') no-repeat top center;
   background-size: cover;
   color: #fff;
@@ -29,6 +30,30 @@
 
     #{$component-name}__title {
       margin-bottom: 0;
+    }
+  }
+
+  &--not-found {
+    color: #000;
+    background: none;
+
+    #{$component-name}__inner {
+      display: block;
+    }
+
+    #{$component-name}__top {
+      position: absolute;
+      right: 0;
+      left: 0;
+      padding-bottom: 0;
+    }
+
+    #{$component-name}__tel {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    #{$component-name}__content {
+      max-width: 100%;
     }
   }
 }
@@ -133,8 +158,8 @@
   margin-bottom: 40px;
 }
 
-.page-header__content span {
-  font-family: '"Roboto"', sans-serif;
+.page-header__title span {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
