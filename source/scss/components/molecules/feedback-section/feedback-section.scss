@@ -1,14 +1,33 @@
 .feedback-section {
+
+  @include media-breakpoint-down(lg) {
+    background: none;
+  }
+
   background: url('../images/bg-feedback-section.svg') no-repeat right 516px;
 }
 
 .feedback-section__inner {
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .feedback-section__left-wrap {
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 70px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+  }
+
   width: 100%;
 
   p {
@@ -20,6 +39,19 @@
 }
 
 .feedback-section__title {
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 70px;
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
   margin-bottom: 141px;
   font-size: 80px;
   line-height: 88px;
