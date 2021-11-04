@@ -16,9 +16,9 @@
 npm start          # запуск сервера разработки
 npm start deploy   # отправка содержимого папки сборки на gh-pages (нужен репозиторий на github.com)
 npm run build      # сборка для production без запуска сервера разработки
-npm run test       # проверка всех scss- и js-файлов на соответствие правилам (см. .stylelintrc и eslintrc соответственно)
-npm run test:style # проверить только scss-файлы
-npm run test:js    # проверить только js-файлы
+npm run lint:all       # проверка всех scss- и js-файлов на соответствие правилам (см. .stylelintrc и eslintrc соответственно)
+npm run lint:style # проверить только scss-файлы
+npm run lint:js    # проверить только js-файлы
 ```
 
 
