@@ -10,7 +10,13 @@
 
 .feedback-section__left-wrap {
   width: 100%;
-  max-width: 381px;
+
+  p {
+    color: transparent;
+    font-size: 38px;
+    line-height: 48px;
+    -webkit-text-stroke: 1px $color-main;
+  }
 }
 
 .feedback-section__title {
