@@ -25,16 +25,16 @@ npm run lint:js    # проверить только js-файлы
 ## Структура
 
 ```bash
-build/                     # Папка сборки
-source/                    # Исходники
-  blocks/                  # Блоки
-  fonts/                   # Шрифты
-  img/                     # Доп. изображения
-  pages/                   # Страницы проекта
-  template-parts/          # html блоки для сайтовой шапки и футера
-  scss/                    # Служебные стилевые файлы
-  scss/components          # SCSS файлы БЭМ-блоков
-  scss/components/shared   # SCSS файлы атомарных БЭМ-блоков
+build/                          # Папка сборки
+source/                         # Исходники
+  blocks/                       # Блоки
+  fonts/                        # Шрифты
+  img/                          # Доп. изображения
+  pages/                        # Страницы проекта
+  template-parts/               # html блоки для сайтовой шапки и футера
+  scss/                         # Служебные стилевые файлы
+  scss/components/molecules     # SCSS файлы БЭМ-блоков проекта
+  scss/components/atoms         # SCSS файлы атомарных БЭМ-блоков
 ```
 
 
