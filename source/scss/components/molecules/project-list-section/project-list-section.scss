@@ -1,0 +1,42 @@
+.project-list-section {
+  border-bottom: 1px solid #dde0e1;
+
+  &__inner {
+
+    @include media-breakpoint-down(md) {
+      grid-auto-rows: 360px;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    }
+
+    display: grid;
+    grid-auto-rows: 579px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 5px;
+    margin-bottom: 100px;
+  }
+
+  &__item .project-item {
+
+    .project-item__date {
+
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
+
+      margin-bottom: 0;
+      font-size: 15px;
+      line-height: 40px;
+    }
+
+    .project-item__title {
+
+      @include media-breakpoint-down(md) {
+        font-size: 25px;
+        line-height: 25px;
+      }
+
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+}
