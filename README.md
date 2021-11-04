@@ -64,7 +64,7 @@ source/                         # Исходники
 Используемый постпроцессинг:
 
 1. [autoprefixer](https://github.com/postcss/autoprefixer)
-2. [css-mqpacker](https://www.npmjs.com/package/postcss-sort-media-queries)
+2. [postcss-sort-media-queries](https://www.npmjs.com/package/postcss-sort-media-queries)
 3. [postcss-inline-svg](https://github.com/TrySound/postcss-inline-svg)
 
 ### Стилевой код-гайд
