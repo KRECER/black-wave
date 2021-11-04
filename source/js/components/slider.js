@@ -25,6 +25,7 @@ sliders.forEach((sliderEl) => {
   const sliderOptions = SliderOption[sliderName];
   const buttonPrevEl = sliderEl.querySelector('.swiper-button-prev');
   const buttonNextEl = sliderEl.querySelector('.swiper-button-next');
+  const paginationEl = sliderEl.querySelector('.swiper-pagination');
   const swiperEl = sliderEl.querySelector('.swiper');
   const slidesTotalCount = sliderEl.querySelectorAll('.swiper-slide').length;
 
@@ -32,6 +33,10 @@ sliders.forEach((sliderEl) => {
 
   if (buttonPrevEl && buttonNextEl) {
     sliderOptions.navigation = { prevEl: buttonPrevEl, nextEl: buttonNextEl };
+  }
+
+  if (paginationEl) {
+    sliderOptions.pagination = { el: paginationEl };
   }
 
   if (hasCounter) {
