@@ -34,9 +34,11 @@ let prettyOption = {
 
 // Список и настройки плагинов postCSS
 let postCssPlugins = [
+  inlineSVG({
+    paths: ['./source/'],
+  }),
   autoprefixer({ grid: true }),
   sortMQ({ sort: 'desktop-first' }),
-  inlineSVG(),
 ];
 
 const reload = (done) => {
