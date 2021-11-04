@@ -10,8 +10,8 @@
 .services-section__inner {
 
   @include media-breakpoint-down(lg) {
-    position: relative;
     display: block;
+    position: relative;
   }
 
   display: flex;

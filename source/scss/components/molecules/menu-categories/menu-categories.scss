@@ -1,9 +1,9 @@
 .menu-categories {
   $component-name: &;
-
-  position: relative;
   display: flex;
   justify-content: space-between;
+
+  position: relative;
   margin-bottom: 50px;
   text-transform: uppercase;
   font-size: 18px;
@@ -11,31 +11,31 @@
   text-align: center;
 
   &__item {
+    padding-bottom: 125px;
+  }
 
-    &--active {
-      padding-bottom: 125px;
+  &__item--active {
 
-      #{$component-name}__link {
-        position: relative;
-        color: #fff;
+    #{$component-name}__link {
+      position: relative;
+      color: #fff;
+      background-color: $color-main;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 1px;
+        height: 50px;
+        transform: translateX(-50%);
         background-color: $color-main;
-
-        &::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: 100%;
-          transform: translateX(-50%);
-          width: 1px;
-          height: 50px;
-          background-color: $color-main;
-        }
       }
+    }
 
-      #{$component-name}__sublist {
-        display: flex;
-        justify-content: space-between;
-      }
+    #{$component-name}__sublist {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -53,11 +53,11 @@
   }
 
   &__sublist {
+    display: none;
     position: absolute;
     right: 0;
-    left: 0;
     bottom: 0;
-    display: none;
+    left: 0;
 
     a {
       border: 1px solid $color-main;
