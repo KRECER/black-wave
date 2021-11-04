@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint:all": "npm run lint:style && npm run lint:js",
-    "lint:style": "npx stylelint \"source/scss/**/*.scss\" --syntax=scss --color",
+    "lint:style": "npx stylelint \"source/scss/**/*.scss\" --syntax=scss --color --fix",
     "lint:js": "npx eslint source/js/**/*.js --fix",
     "start": "cross-env MODE=development npx gulp",
     "build": "cross-env MODE=production npx gulp build",
