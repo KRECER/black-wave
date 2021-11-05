@@ -13,8 +13,8 @@
     flex-shrink: 0;
   }
 
-  #{$component-name} &__title {
-    margin-bottom: 132px;
+  #{$component-name}__title {
+    margin-bottom: 30px;
     font-size: 55px;
     line-height: 65px;
 

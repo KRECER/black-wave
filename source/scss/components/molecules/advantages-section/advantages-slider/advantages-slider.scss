@@ -25,6 +25,15 @@
   font-size: inherit;
 }
 
+.advantages-slider .swiper-pagination {
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+  }
+
+  display: none;
+}
+
 .advantages-slider__item {
   display: flex;
   align-items: center;
