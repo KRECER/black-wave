@@ -59,15 +59,6 @@
 }
 
 .page-header__inner {
-
-  @include media-breakpoint-down(lg) {
-    padding-left: 100px;
-  }
-
-  @include media-breakpoint-down(md) {
-    padding-left: 0;
-  }
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -75,14 +66,7 @@
 }
 
 .page-header__sidebar {
-
-  @include media-breakpoint-down(xl) {
-    width: 124px;
-  }
-
-  @include media-breakpoint-down(md) {
-    width: 64px;
-  }
+  @include adaptiv-value(width, 200, 64);
 
   display: flex;
   flex-direction: column;
@@ -91,7 +75,6 @@
   position: fixed;
   z-index: 101;
   left: 0;
-  width: 200px;
   min-height: 100vh;
   border-right: 1px solid #8b979a;
   background-color: #000;
@@ -117,14 +100,9 @@
 }
 
 .page-header__title {
-
-  @include media-breakpoint-down(xxl) {
-    font-size: 60px;
-    line-height: 1.2;
-  }
+  @include adaptiv-value(font-size, 72, 40);
 
   @include media-breakpoint-down(md) {
-    font-size: 40px;
 
     & br:last-child {
       display: block;
@@ -132,8 +110,6 @@
   }
 
   margin-bottom: 43px;
-  font-size: 72px;
-  line-height: 75px;
 
   & br:last-child {
     display: none;
@@ -141,10 +117,6 @@
 }
 
 .page-header__content {
-
-  @include media-breakpoint-down(xl) {
-    max-width: 100%;
-  }
 
   @include media-breakpoint-down(md) {
     margin-bottom: 0;
@@ -154,7 +126,7 @@
     }
   }
 
-  max-width: 721px;
+  max-width: 734px;
   margin-bottom: 40px;
 }
 
@@ -180,7 +152,7 @@
     margin-bottom: 0;
   }
 
-  font-family: '"Roboto"', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -224,12 +196,12 @@
 }
 
 .page-header__bottom-right-wrap {
+  @include adaptiv-value(padding-top, 50, 30);
+  @include adaptiv-value(padding-left, 97, 40);
+  @include adaptiv-value(padding-bottom, 14, 40);
 
   @include media-breakpoint-down(xl) {
     width: 100%;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
   }
 
   @include media-breakpoint-down(md) {
@@ -238,9 +210,6 @@
 
   position: relative;
   width: 50%;
-  padding-top: 50px;
-  padding-left: 97px;
-  padding-bottom: 14px;
   color: #000;
   background-color: #fff;
 
@@ -257,14 +226,10 @@
 }
 
 .page-header__services-link {
-
-  @include media-breakpoint-down(md) {
-    font-size: 15px;
-  }
+  @include adaptiv-value(font-size, 19, 15);
 
   border-left: 1px solid $color-main;
   padding-left: 20px;
-  font-size: 19px;
   line-height: 40px;
   letter-spacing: 0.02em;
   text-transform: uppercase;

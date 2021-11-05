@@ -29,19 +29,11 @@
 }
 
 .page__inner {
-
-  @include media-breakpoint-down(xl) {
-    padding-left: 124px;
-  }
-
-  @include media-breakpoint-down(md) {
-    padding-left: 64px;
-  }
+  @include adaptiv-value(padding-left, 200, 64);
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-left: 200px;
 }
 
 .page__content {
@@ -77,7 +69,7 @@ body {
   font-weight: 800;
   font-size: $font-size;
   text-align: left;
-  line-height: 23px;
+  line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -272,6 +264,7 @@ figure {
 }
 
 p {
+  @include adaptiv-value(font-size, 16, 14);
   /* http://clagnut.com/blog/2395 */
   hyphens: auto;
   hyphenate-limit-chars: 6 3 3;
@@ -296,41 +289,10 @@ blockquote {
 }
 
 .container {
-
-  @include media-breakpoint-down(xxl) {
-    max-width: $container-xxl;
-  }
-
-  @include media-breakpoint-down(xl) {
-    max-width: $container-xl;
-
-    &:not(.container--standart) {
-      padding-left: 140px;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    max-width: $container-lg;
-
-    &:not(.container--standart) {
-      padding-left: 50px;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    max-width: $container-md;
-  }
-
-  @include media-breakpoint-down(sm) {
-    max-width: $container-sm;
-    padding-left: 30px;
-  }
-  width: 100%;
-
+  @include adaptiv-value(padding-left, 174, 30);
   width: 100%;
   max-width: $container-xxl;
   margin: 0 auto;
-  padding-left: 174px;
   padding-right: 30px;
 }
 
@@ -348,31 +310,12 @@ blockquote {
 }
 
 .page-section {
-
-  @include media-breakpoint-down(xl) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  @include media-breakpoint-down (sm) {
-    padding-top: 78px;
-    padding-bottom: 78px;
-  }
-
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @include adaptiv-value(padding-top, 200, 78);
+  @include adaptiv-value(padding-bottom, 200, 78);
 }
 
 .section-title {
-
-  @include media-breakpoint-down(lg) {
-    font-size: 70px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 40px;
-  }
-  font-size: 100px;
+  @include adaptiv-value(font-size, 100, 40);
 }
 
 .no-scroll {
