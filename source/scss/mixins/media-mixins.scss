@@ -41,10 +41,12 @@
   #{$prop}: $start-size + px;
 
   @if $breakpoint {
+
     @media (max-width: #{$breakpoint + px}) {
       #{$prop}: #{$min-size + px};
     }
-  } @else {
+  }
+  @else {
     @include media-breakpoint-down(xxl) {
       #{$prop}: calc(#{$min-size + px} + #{$add-size} * ((100vw - #{320 + px}) / (1800 - 320)));
     }
@@ -53,5 +55,4 @@
   @media (min-width: #{$breakpoint + px}) and (max-width: #{$screen-xxl + px}) {
     #{$prop}: calc(#{$min-size + px} + #{$add-size} * ((100vw - #{$breakpoint + px}) / (1800 - #{$breakpoint})));
   }
-
 }

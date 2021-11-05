@@ -265,6 +265,7 @@ figure {
 
 p {
   @include adaptiv-value(font-size, 16, 14);
+
   /* http://clagnut.com/blog/2395 */
   hyphens: auto;
   hyphenate-limit-chars: 6 3 3;
