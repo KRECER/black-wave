@@ -19,11 +19,6 @@
   justify-content: space-between;
 }
 
-.services-section__left-wrap {
-  width: 100%;
-  max-width: 530px;
-}
-
 .services-section__title {
 
   @include media-breakpoint-down(lg) {
@@ -46,27 +41,15 @@
 
 .services-section__list {
 
-  @include media-breakpoint-down(xl) {
-    font-size: 47px;
-    line-height: 70px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
   }
 
   @include media-breakpoint-down(lg) {
     margin-bottom: 97px;
   }
 
-  @include media-breakpoint-down(md) {
-    font-size: 42px;
-    line-height: 73px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 25px;
-    line-height: 25px;
-  }
-
-  font-size: 60px;
-  line-height: 75px;
+  @include adaptiv-value(font-size, 60, 25, $screen-lg);
 }
 
 .services-section__list-item {

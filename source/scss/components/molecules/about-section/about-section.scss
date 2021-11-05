@@ -19,10 +19,6 @@
 
 .about-section__title {
 
-  @include media-breakpoint-down(xl) {
-    font-size: 82px;
-  }
-
   @include media-breakpoint-down(lg) {
     margin-bottom: 70px;
   }
@@ -75,18 +71,15 @@
 }
 
 .about-section__right-wrap {
+  @include adaptiv-value(font-size, 16, 14);
 
   @include media-breakpoint-down(lg) {
-    padding: 0;
+    align-items: flex-start;
   }
 
-  @include media-breakpoint-down(sm) {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  padding-left: 97px;
-  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
@@ -98,7 +91,6 @@
     max-width: 450px;
   }
 
-  width: 100%;
   max-width: 312px;
 }
 
@@ -108,7 +100,7 @@
     margin-bottom: 30px;
   }
 
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 }
 
 .about-section__right-list-item span {
