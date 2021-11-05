@@ -1,4 +1,28 @@
 .advantages-slider {
+
+  @include media-breakpoint-down(xxl) {
+    padding-left: 85px;
+    padding-right: 55px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 150px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+
   position: relative;
   padding-top: 180px;
   padding-bottom: 180px;
@@ -12,10 +36,46 @@
 }
 
 .advantages-slider .swiper-button-prev {
+
+  @include media-breakpoint-down(xxl) {
+    left: 60px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    left: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    left: 50px;
+    top: 555px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
   left: 178px;
 }
 
 .advantages-slider .swiper-button-next {
+
+  @include media-breakpoint-down(xxl) {
+    right:  60px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    right: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    right: 50px;
+    top: 555px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
   right: 86px;
 }
 
@@ -29,12 +89,38 @@
 
   @include media-breakpoint-down(lg) {
     display: block;
+    top: 540px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: 430px;
   }
 
   display: none;
 }
 
+.advantages-slider .swiper-pagination-bullet {
+
+  @include media-breakpoint-down(md) {
+    width: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 40px;
+  }
+
+  width: 74px;
+  height: 3px;
+  border-radius: 0;
+  background-color: #000;
+}
+
 .advantages-slider__item {
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+  }
+
   display: flex;
   align-items: center;
 }
@@ -48,6 +134,21 @@
 }
 
 .advantages-slider__item-title {
+
+  @include media-breakpoint-down(lg) {
+    font-size: 45px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 33px;
+    line-height: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   font-size: 60px;
   line-height: 63px;
 }
