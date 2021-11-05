@@ -46,8 +46,8 @@
   }
 
   @include media-breakpoint-down(lg) {
-    left: 50px;
     top: 555px;
+    left: 50px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -60,7 +60,7 @@
 .advantages-slider .swiper-button-next {
 
   @include media-breakpoint-down(xxl) {
-    right:  60px;
+    right: 60px;
   }
 
   @include media-breakpoint-down(xl) {
@@ -68,8 +68,8 @@
   }
 
   @include media-breakpoint-down(lg) {
-    right: 50px;
     top: 555px;
+    right: 50px;
   }
 
   @include media-breakpoint-down(sm) {
