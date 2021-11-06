@@ -1,10 +1,25 @@
 .feedback-form__title {
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 35px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 25px;
+  }
+
   margin-bottom: 45px;
   font-size: 35px;
   line-height: 35px;
 }
 
 .feedback-form__inner {
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -13,10 +28,20 @@
 
 .feedback-form__left-wrap,
 .feedback-form__right-wrap {
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+
   width: 50%;
 }
 
 .feedback-form__footer {
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column-reverse;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,10 +52,24 @@
 
 .feedback-form__footer-info-wrap,
 .feedback-form__footer-submit-btn-wrap {
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
   width: 50%;
 }
 
 .feedback-form__footer-info-wrap {
+
+  @include media-breakpoint-down(xxl) {
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 30px;
+  }
+
   display: flex;
   justify-content: space-between;
 }
