@@ -1,33 +1,11 @@
 .advantages-slider {
-
-  @include media-breakpoint-down(xxl) {
-    padding-left: 85px;
-    padding-right: 55px;
-  }
-
-  @include media-breakpoint-down(xl) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 150px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 100px;
-    padding-bottom: 150px;
-  }
+  @include adaptiv-value(padding-left, 225, 0, $screen-sm);
+  @include adaptiv-value(padding-right, 225, 0, $screen-sm);
+  @include adaptiv-value(padding-top, 180, 100, $screen-sm);
+  @include adaptiv-value(padding-bottom, 180, 150, $screen-sm);
 
   position: relative;
-  padding-top: 180px;
-  padding-bottom: 180px;
-  padding-left: 240px;
-  padding-right: 240px;
+  padding: 180px 240px;
   background-color: #fff;
   background-image: url('../images/bg-advantages-section.jpg');
   background-repeat: no-repeat;
@@ -36,53 +14,29 @@
 }
 
 .advantages-slider .swiper-button-prev {
-
-  @include media-breakpoint-down(xxl) {
-    left: 60px;
-  }
-
-  @include media-breakpoint-down(xl) {
-    left: 40px;
-  }
-
-  @include media-breakpoint-down(lg) {
-    top: 555px;
-    left: 50px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-
-  left: 178px;
+  @include adaptiv-value(left, 100, 50);
 }
 
 .advantages-slider .swiper-button-next {
+  @include adaptiv-value(right, 45, 50);
+}
 
-  @include media-breakpoint-down(xxl) {
-    right: 60px;
-  }
-
-  @include media-breakpoint-down(xl) {
-    right: 40px;
-  }
+.advantages-slider .swiper-button-prev,
+.advantages-slider .swiper-button-next {
 
   @include media-breakpoint-down(lg) {
-    top: 555px;
-    right: 50px;
+    top: auto;
+    bottom: 6%;
   }
 
   @include media-breakpoint-down(sm) {
     display: none;
   }
 
-  right: 86px;
-}
-
-.advantages-slider .swiper-button-prev::after,
-.advantages-slider .swiper-button-next::after {
-  color: #000;
-  font-size: inherit;
+  &::after {
+    color: #000;
+    font-size: inherit;
+  }
 }
 
 .advantages-slider .swiper-pagination {
@@ -97,19 +51,16 @@
   }
 
   display: none;
+
+  @at-root div.advantages-section__slider .swiper-pagination {
+    @include adaptiv-value(bottom, 50, 50, $screen-sm);
+    top: auto;
+  }
 }
 
 .advantages-slider .swiper-pagination-bullet {
+  @include adaptiv-value(width, 74, 40);
 
-  @include media-breakpoint-down(md) {
-    width: 50px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    width: 40px;
-  }
-
-  width: 74px;
   height: 3px;
   border-radius: 0;
   background-color: #000;
@@ -134,21 +85,5 @@
 }
 
 .advantages-slider__item-title {
-
-  @include media-breakpoint-down(lg) {
-    font-size: 45px;
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: 33px;
-    line-height: 48px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  font-size: 60px;
-  line-height: 63px;
+  @include adaptiv-value(font-size, 54, 20);
 }
