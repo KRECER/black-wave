@@ -7,6 +7,19 @@
   }
 
   &__title {
+
+    @include media-breakpoint-down(xl) {
+      left: 470px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      left: 389px;
+    }
+
+    @include media-breakpoint-down(md) {
+      position: static;
+    }
+
     position: absolute;
     top: 200px;
     left: 526px;
