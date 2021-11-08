@@ -1,7 +1,7 @@
 .social-projects-section {
 
   &__inner {
-    
+
     @include media-breakpoint-down(lg) {
       display: block;
     }
