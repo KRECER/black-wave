@@ -34,6 +34,16 @@
   }
 
   &--not-found {
+
+    @include media-breakpoint-down(xxl) {
+      background: url('../images/not-found__penis-right.png') no-repeat right;
+      background-size: contain;
+    }
+
+    @include media-breakpoint-down(sm) {
+      background-size: cover;
+    }
+
     color: #000;
     background: none;
 
@@ -43,7 +53,7 @@
 
     #{$component-name}__top {
       position: absolute;
-      right: 0;
+      right: 30px;
       left: 0;
       padding-bottom: 0;
     }
@@ -54,6 +64,7 @@
 
     #{$component-name}__content {
       max-width: 100%;
+      margin-bottom: 0;
     }
   }
 }

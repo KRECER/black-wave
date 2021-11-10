@@ -4,49 +4,72 @@
   position: relative;
   min-height: 100vh;
 
+  @include media-breakpoint-down(xxl) {
+    justify-content: center;
+  }
+
   &__inner {
+
+    @include media-breakpoint-down(xxl) {
+      align-self: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     padding-top: 130px;
+    padding-bottom: 100px;
   }
 
   &__title {
 
-    @include media-breakpoint-down(xxl) {
-      font-size: 300px;
-    }
+    @include adaptiv-value(font-size, 400, 150);
 
-    padding-left: 75px;
-    font-size: 400px;
-
+    text-align: center;
+    
     span {
       color: #4d4d4d;
     }
   }
 
   &__penis-img {
+
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    }
+
     position: absolute;
     top: 0;
-    left: -100px;
+    height: 100%;
+    left: -130px;
     object-fit: contain;
   }
 
   &__info {
+
+    @include adaptiv-value(font-size, 35, 15);
+
+    text-align: center;
     margin-bottom: 80px;
     color: $color-main;
-    font-size: 35px;
     line-height: 25px;
   }
 
   &__link-to-home {
 
-    @include media-breakpoint-down(xxl) {
-      font-size: 50px;
+    @include media-breakpoint-down(lg) {
+      line-height: 50px;
     }
-    display: inline-block;
 
+    @include media-breakpoint-down(sm) {
+      line-height: 30px;
+    }
+
+    @include adaptiv-value(font-size, 80, 30);
+
+    display: inline-block;
     position: relative;
     transform: rotate(-5.5deg);
     padding-left: 75px;
-    font-size: 80px;
     line-height: 98px;
     text-decoration: none;
     color: #000000;
@@ -68,6 +91,11 @@
     span {
 
       &::before {
+
+        @include media-breakpoint-down(xxl) {
+          display: none;
+        }
+
         content: '';
         position: absolute;
         bottom: 13px;
