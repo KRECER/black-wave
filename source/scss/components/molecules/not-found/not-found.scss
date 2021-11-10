@@ -1,12 +1,12 @@
 .not-found {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  min-height: 100vh;
 
   @include media-breakpoint-down(xxl) {
     justify-content: center;
   }
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 100vh;
 
   &__inner {
 
@@ -25,7 +25,7 @@
     @include adaptiv-value(font-size, 400, 150);
 
     text-align: center;
-    
+
     span {
       color: #4d4d4d;
     }
@@ -39,8 +39,8 @@
 
     position: absolute;
     top: 0;
-    height: 100%;
     left: -130px;
+    height: 100%;
     object-fit: contain;
   }
 
