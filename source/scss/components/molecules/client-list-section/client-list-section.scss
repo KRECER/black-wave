@@ -70,8 +70,8 @@
   &__item-info-title {
 
     @include media-breakpoint-down(sm) {
-      line-height: 50px
-     }
+      line-height: 50px;
+    }
 
     @include adaptiv-value(font-size, 43, 35);
 
@@ -81,11 +81,11 @@
   &__item-info-descr {
 
     @include media-breakpoint-down(md) {
-      line-height: 20px
-     }
+      line-height: 20px;
+    }
 
     @include adaptiv-value(font-size, 23, 16);
-    
+
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
