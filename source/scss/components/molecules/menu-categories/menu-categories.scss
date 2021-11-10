@@ -1,5 +1,18 @@
 .menu-categories {
-  $component-name: &;
+
+  @include media-breakpoint-down(xxl) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    line-height: 24px;
+  }
+
   display: flex;
   justify-content: space-between;
 
@@ -10,18 +23,68 @@
   line-height: 75px;
   text-align: center;
 
+  .menu-categories__link {
+
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0;
+    }
+  }
+
+  .menu-categories__sublist-item-link {
+
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0;
+    }
+  }
+
+  .menu-categories__sublist-item {
+
+    margin-bottom: -1px;
+  }
+
+  .menu-categories__sublist--active {
+
+    @include media-breakpoint-down(xxl) {
+      display: block;
+    }
+  }
+
   &__item {
+
+    @include media-breakpoint-down(xxl) {
+      padding-bottom: 20px;
+    }
+
     padding-bottom: 125px;
   }
 
   &__item--active {
+
+    .menu-categories__link {
+      pointer-events: none;
+      cursor: default;
+    }
 
     #{$component-name}__link {
       position: relative;
       color: #fff;
       background-color: $color-main;
 
+
       &::after {
+
+        @include media-breakpoint-down(xxl) {
+          display: none;
+        }
+
         content: '';
         position: absolute;
         top: 100%;
@@ -34,10 +97,42 @@
     }
 
     #{$component-name}__sublist {
+
+      @include media-breakpoint-down(xxl) {
+        display: none;
+        position: static;
+      }
+
       display: flex;
       justify-content: space-between;
     }
   }
+
+  &__sublist {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    a {
+
+      @include media-breakpoint-down(xxl) {
+        border-radius: 0;
+      }
+
+      border: 1px solid #877b50;
+      color: #fff;
+      background-color: #998a57;
+    }
+  }
+
+  &--centered {
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  $component-name: &;
 
   a {
     display: inline-block;
@@ -50,24 +145,5 @@
       text-decoration: none;
       color: #fff;
     }
-  }
-
-  &__sublist {
-    display: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    a {
-      border: 1px solid $color-main;
-      color: $color-main;
-      background-color: #fff;
-    }
-  }
-
-  &--centered {
-    justify-content: center;
-    column-gap: 50px;
   }
 }
