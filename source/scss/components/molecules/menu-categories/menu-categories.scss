@@ -107,6 +107,7 @@
       display: flex;
       justify-content: space-between;
     }
+
     .menu-categories__sublist--active {
 
       @include media-breakpoint-down(xxl) {
