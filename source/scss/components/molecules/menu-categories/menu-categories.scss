@@ -1,7 +1,5 @@
 .menu-categories {
 
-  $component-name: &;
-
   @include media-breakpoint-down(xxl) {
     margin-bottom: 0;
   }
@@ -50,6 +48,13 @@
   .menu-categories__sublist-item {
 
     margin-bottom: -1px;
+  }
+
+  .menu-categories__sublist--active {
+
+    @include media-breakpoint-down(xxl) {
+      display: block;
+    }
   }
 
   &__item {
@@ -110,13 +115,6 @@
     }
   }
 
-  .menu-categories__sublist--active {
-
-    @include media-breakpoint-down(xxl) {
-      display: block;
-    }
-  }
-
   &__sublist {
     display: none;
     position: absolute;
@@ -129,6 +127,8 @@
     justify-content: center;
     column-gap: 50px;
   }
+
+  $component-name: &;
 
   a {
 
