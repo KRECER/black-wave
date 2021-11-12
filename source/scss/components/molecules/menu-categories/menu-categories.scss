@@ -3,10 +3,6 @@
   $component-name: &;
 
   @include media-breakpoint-down(xxl) {
-    margin-bottom: 0;
-  }
-
-  @include media-breakpoint-down(xl) {
     display: block;
     margin-bottom: 0;
   }
@@ -27,7 +23,7 @@
 
   .menu-categories__link {
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(xxl) {
       width: 100%;
     }
 
@@ -38,7 +34,7 @@
 
   .menu-categories__sublist-item-link {
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(xxl) {
       width: 100%;
     }
 

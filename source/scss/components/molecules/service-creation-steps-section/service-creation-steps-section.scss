@@ -4,12 +4,44 @@
   background-position: right 130px center;
 
   &__title {
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 150px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 60px;
+    }
+
+    @include adaptiv-value(font-size, 65, 40);
+    @include adaptiv-value(line-height, 65, 40);
+
     margin-bottom: 200px;
-    font-size: 65px;
-    line-height: 65px;
   }
 
   &__list-wrap {
+
+    @include media-breakpoint-down(xxl) {
+     column-gap: 45px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 75px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
+    }
+
     display: flex;
     column-gap: 75px;
     margin-bottom: 130px;

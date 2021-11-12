@@ -6,6 +6,13 @@
   background-size: cover;
 
   &__inner {
+
+    @include media-breakpoint-down(xl) {
+      row-gap: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
     display: flex;
     justify-content: center;
     column-gap: 62px;
@@ -17,6 +24,11 @@
     border: 1px solid rgba(168, 152, 97, 0.5);
 
     &-content {
+
+      @include media-breakpoint-down(xl) {
+        padding: 30px 20px;
+      }
+
       position: relative;
       z-index: 1;
       height: 100%;
@@ -25,13 +37,24 @@
     }
 
     &-title {
+
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 30px;
+      }
+
+      @include adaptiv-value(font-size, 35, 18);
+      @include adaptiv-value(line-height, 45, 28);
+
       margin-bottom: 75px;
       color: $color-main;
-      font-size: 35px;
-      line-height: 45px;
     }
 
     p {
+
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 20px;
+      }
+
       margin-bottom: 40px;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
@@ -40,6 +63,27 @@
     &:first-child {
 
       &::after {
+
+        @include media-breakpoint-down(xl) {
+          bottom: -510px;
+          left: -100px;
+          background-size: 60%;
+        }
+
+        @include media-breakpoint-down(xl) {
+          bottom: -500px;
+          left: 50px;
+          background-size: 60%;
+        }
+
+        @include media-breakpoint-down(md) {
+          bottom: -560px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+
         content: '';
         position: absolute;
         bottom: -33px;
@@ -56,6 +100,27 @@
     &:last-child {
 
       &::after {
+
+        @include media-breakpoint-down(xl) {
+          background-size: 50%;
+          top: -620px;
+          right: -131px;
+        }
+
+        @include media-breakpoint-down(lg) {
+          top: -600px;
+          right: 20px;
+          transform: rotate(48deg);
+        }
+
+        @include media-breakpoint-down(md) {
+          top: -670px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+
         content: '';
         position: absolute;
         top: -111px;

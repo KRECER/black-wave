@@ -5,21 +5,41 @@
   &__item {
     $component-name: &;
 
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+
+
     position: relative;
-    max-width: 207px;
+    max-width: 224px;
 
     &-line {
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
       position: absolute;
       top: -10px;
       left: 34px;
     }
 
     img {
+
+      @include media-breakpoint-down(lg) {
+        vertical-align: bottom;
+      }
+
       display: inline-block;
       vertical-align: inherit;
     }
 
     &-num {
+
+      @include media-breakpoint-down(lg) {
+        top: -10px;
+      }
+
       position: relative;
       top: -25px;
       color: $color-main;
@@ -37,35 +57,66 @@
       font-weight: 400;
     }
 
+    &:first-child {
+
+      #{$component-name}-line {
+        width: 100%;
+      }
+    }
+
     &:nth-child(2) {
+
+      @include media-breakpoint-down(lg) {
+        transform: none;
+      }
+
       transform: translateY(-32px);
 
       #{$component-name}-line {
         top: 20px;
+        width: 100%;
       }
     }
 
     &:nth-child(3) {
+
+      @include media-breakpoint-down(lg) {
+        transform: none;
+      }
+
       transform: translateY(-19px);
 
       #{$component-name}-line {
         top: -10px;
+        width: 100%;
       }
     }
 
     &:nth-child(4) {
+
+      @include media-breakpoint-down(lg) {
+        transform: none;
+      }
+
       transform: translateY(-54px);
 
       #{$component-name}-line {
         top: -10px;
+        width: 100%;
       }
     }
 
     &:nth-child(5) {
+
+      @include media-breakpoint-down(lg) {
+        transform: none;
+      }
+
       transform: translateY(-81px);
 
       #{$component-name}-line {
         top: 2px;
+        width: 100%;
       }
     }
   }
