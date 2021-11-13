@@ -85,7 +85,7 @@
     & span:nth-child(3) {
 
       @include media-breakpoint-down(sm) {
-       left: 5px;
+        left: 5px;
       }
 
       @include adaptiv-value(font-size, 97, 50);
@@ -105,14 +105,14 @@
   }
 
   &__list {
-    
-    @include adaptiv-value(font-size, 20, 15);
 
-    line-height: 65px;
+    @include adaptiv-value(font-size, 20, 15);
 
     @include media-breakpoint-down(sm) {
       line-height: 22px;
     }
+
+    line-height: 65px;
 
     &-item {
 
