@@ -10,8 +10,14 @@
   }
 
   #{$component-name} &__title {
+
+    @include adaptiv-value(font-size, 55, 33);
+    @include adaptiv-value(line-height, 65, 38);
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 60px;
+    }
+
     margin-bottom: 108px;
-    font-size: 55px;
-    line-height: 65px;
   }
 }

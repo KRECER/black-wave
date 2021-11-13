@@ -56,13 +56,15 @@
       @include media-breakpoint-down(lg) {
         top: -155px;
         left: 140px;
-        background-size: 50%;
+        width: 240px;
+        height: 200px;
       }
 
       @include media-breakpoint-down(sm) {
-        top: -120px;
-        left: 34px;
-        background-size: 40%;
+        top: -110px;
+        left: 65px;
+        width: 160px;
+        height: 140px;
       }
 
       content: '';

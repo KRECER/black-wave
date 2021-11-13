@@ -29,16 +29,36 @@
   }
 
   &__title {
+
+    @include media-breakpoint-down(xl) {
+      padding: 38px 100px 38px 50px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 20px 100px 20px 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 15px 65px 15px 15px;
+    }
+
+    @include adaptiv-value(font-size, 35, 15);
+    @include adaptiv-value(line-height, 65, 15);
+
     position: relative;
     overflow: hidden;
     padding: 38px 50px;
     margin-bottom: 0;
     padding-right: 40px;
-    font-size: 35px;
     line-height: 65px;
     cursor: pointer;
 
     &::after {
+
+      @include media-breakpoint-down(sm) {
+        right: 20px;
+      }
+
       content: '';
       position: absolute;
       top: 50%;

@@ -4,8 +4,13 @@
   $component-name: &;
 
   &__inner {
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 60px;
+    }
+
     display: flex;
-    column-gap: 90px;
+    column-gap: 30px;
     margin-bottom: 136px;
   }
 
@@ -14,9 +19,15 @@
   }
 
   #{$component-name}__title {
+
+    @include media-breakpoint-down(xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include adaptiv-value(font-size, 55, 30);
+    @include adaptiv-value(line-height, 65, 40);
+
     margin-bottom: 30px;
-    font-size: 55px;
-    line-height: 65px;
 
     span {
       color: $color-main;
@@ -28,12 +39,27 @@
   }
 
   &__price-and-list-wrap {
+
+    @include media-breakpoint-down(xxl) {
+      margin-top: 30px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      margin-top: 70px;
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__price-and-period-wrap {
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 10px;
+    }
+
     text-align: center;
   }
 
@@ -45,37 +71,65 @@
     }
 
     & span:nth-child(1) {
+
+      @include adaptiv-value(font-size, 31, 21);
+
       margin-right: 10px;
-      font-size: 31px;
     }
 
     & span:nth-child(2) {
-      font-size: 93px;
+
+      @include adaptiv-value(font-size, 93, 50);
     }
 
     & span:nth-child(3) {
+
+      @include media-breakpoint-down(sm) {
+       left: 5px;
+      }
+
+      @include adaptiv-value(font-size, 97, 50);
+
       position: relative;
       top: -20px;
       left: 13px;
-      font-size: 97px;
     }
   }
 
   &__period-wrap {
+
+    @include adaptiv-value(font-size, 32, 22);
+
     color: $color-main;
-    font-size: 32px;
     line-height: 65px;
   }
 
   &__list {
-    font-size: 20px;
+    
+    @include adaptiv-value(font-size, 20, 15);
+
     line-height: 65px;
 
+    @include media-breakpoint-down(sm) {
+      line-height: 22px;
+    }
+
     &-item {
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        margin-bottom: 30px;
+      }
+
       position: relative;
       padding-left: 36px;
 
       &::after {
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+
         content: '';
         position: absolute;
         top: 50%;
