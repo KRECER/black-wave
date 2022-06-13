@@ -1,22 +1,58 @@
 .social-projects-section {
 
   &__inner {
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+
     display: flex;
     column-gap: 130px;
   }
 
   &__left-wrap {
+
+    @include media-breakpoint-down(xxl) {
+      padding-top: 100px;
+    }
+
     width: 100%;
     max-width: 720px;
     padding-top: 200px;
 
     p {
-      font-size: 23px;
+
+      @include media-breakpoint-down(md) {
+        line-height: 30px;
+      }
+
+      @include adaptiv-value(font-size, 23, 16);
       line-height: 40px;
     }
   }
 
   &__title {
+
+    @include media-breakpoint-down(xxl) {
+      margin-bottom: 70px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 50px;
+    }
+
     margin-bottom: 138px;
+  }
+
+  &__right-wrap {
+
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      margin-top: 50px;
+    }
   }
 }

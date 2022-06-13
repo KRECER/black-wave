@@ -1,6 +1,14 @@
 .team-slider {
 
   &__btns-wrap {
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+      column-gap: 0;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
     display: flex;
     column-gap: 30px;
     margin-bottom: 85px;
@@ -35,12 +43,36 @@
   }
 
   &__item {
+
+    @include media-breakpoint-down(xl) {
+      column-gap: 68px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      column-gap: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+
     display: flex;
     column-gap: 124px;
     width: 100%;
     max-width: 1200px;
 
     &-info-wrap {
+
+      @include media-breakpoint-down(lg) {
+        width: 350px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: 50px;
+        width: 100%;
+      }
+
+
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
@@ -64,6 +96,11 @@
     }
 
     &-info-content {
+
+      @include media-breakpoint-down(sm) {
+        padding: 25px;
+      }
+
       position: relative;
       z-index: 1;
       padding: 35px;
@@ -71,6 +108,16 @@
       background-color: rgba(#000, 0.8);
 
       b {
+
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 20px;
+        }
+
         display: block;
         margin-bottom: 20px;
         font-size: 38px;
@@ -78,16 +125,40 @@
     }
 
     &-info-position {
+
+      @include media-breakpoint-down(md) {
+        font-size: 15px;
+      }
+
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       font-size: 25px;
     }
 
     &-descr-wrap {
+
+      @include media-breakpoint-down(xl) {
+        padding-top: 250px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 210px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-top: 50px;
+      }
+
       padding-top: 335px;
 
       p {
-        font-size: 23px;
+
+        @include adaptiv-value(font-size, 23, 16);
+
+        @include media-breakpoint-down(xl) {
+          line-height: 35px;
+        }
+
         line-height: 40px;
       }
     }

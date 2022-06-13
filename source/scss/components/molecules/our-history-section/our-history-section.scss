@@ -13,7 +13,19 @@
     max-width: 624px;
   }
 
+  &__right-wrap {
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 50px;
+    }
+  }
+
   &__title {
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 50px;
+    }
+
     margin-bottom: 195px;
   }
 }
