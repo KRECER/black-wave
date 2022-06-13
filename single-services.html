@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Edge и ряд мобильных браузеров слишком умны. Отключим это. -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+
+  <!-- Предзагрузка шрифтов или иных ресурсов -->
+  <!-- <link rel="preload" href="fonts/Bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <title>Single Services</title>
+</head>
+
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <nav class="main-nav" id="nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="archive-projects.html">Портфолио</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="single-services.html">Услуги</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="clients.html">Клиенты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <header class="page-header page-header--inner">
+        <div class="page-header__sidebar">
+          <a class="logo" href="index.html">
+            <picture class="logo__img">
+              <source srcset="images/logo-mobile.svg" width="26" height="34" media="(max-width: 768px)">
+              <img src="images/logo-desktop.svg" width="94" height="54" alt="site logo">
+            </picture>
+          </a>
+          <div class="burger js-burger" data-target-id="nav" data-target-class-toggle="main-nav--opened">
+            <span></span>
+            <span></span>
+          </div>
+          <select class="language-switcher">
+            <option value="rus">Rus</option>
+            <option value="eng">Eng</option>
+          </select>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="7" height="14">
+                  <use xlink:href="images/sprite.svg#facebook-icon">
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="14" height="14">
+                  <use xlink:href="images/sprite.svg#instagram-icon">
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="14" height="14">
+                  <use xlink:href="images/sprite.svg#linkedin-icon">
+                  </use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="page-header__inner">
+            <div class="page-header__top">
+              <a class="page-header__tel" href="tel:380675907777">+38 (067) 590 77 77</a>
+            </div>
+            <div class="page-header__content">
+              <ul class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item"><span>Название</span></li>
+              </ul>
+              <h1 class="page-header__title">
+                Название
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <main class="page__main">
+        <div class="container">
+          <h1 class="page__title section-title">Landing Page</h1>
+        </div>
+        <div class="container container--standart">
+          <ul class="menu-categories">
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Дизайн
+              </a>
+            </li>
+            <li class="menu-categories__item menu-categories__item--active">
+              <a class="menu-categories__link" href="#">
+                Разработка сайтов
+              </a>
+              <ul class="menu-categories__sublist">
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Landing Page
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Сайт компании
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Интернет-каталог
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Корпоративный сайт
+                  </a>
+                </li>
+                <li class="menu-categories__sublist-item">
+                  <a class="menu-categories__sublist-item-link" href="#">
+                    Интернет-магазин
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Разработка логотипа
+              </a>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Продвижение сайта
+              </a>
+            </li>
+            <li class="menu-categories__item">
+              <a class="menu-categories__link" href="#">
+                Поддержка сайта
+              </a>
+            </li>
+          </ul>
+        </div>
+        <section class="service-description-section page-section">
+          <div class="container">
+            <div class="service-description-section__inner">
+              <div class="service-description-section__left-wrap">
+                <h2 class="service-description-section__title section-title">
+                  Landing <br> page
+                </h2>
+                <p>
+                  Landing page - это одностраничная посадочная страница, задача которой, побудить пользователя совершить целевое
+                  действие.
+                  Такое действие может быть направлено на оформление заказа, онлайн оплату или просто на получение данных
+                  потенциального
+                  клиента.
+                </p>
+                <p>
+                  Мы занимаемся разработкой лендингов c высокой конверсией, с упором на дизайн и легкость восприятия информации
+                  пользователем.
+                </p>
+                <a class="service-description-section__order-btn button button--accent" href="#">
+                  Заказать проект
+                </a>
+              </div>
+              <div class="service-description-section__right-wrap">
+                <img src="images/service-description-section__right-image.jpg" width="805" height="784" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-advantages-section page-section">
+          <h2 class="visually-hidden">Преимущества услуги</h2>
+          <div class="container container--standart">
+            <div class="service-advantages-section__inner">
+              <div class="service-advantages-section__item">
+                <div class="service-advantages-section__item-content">
+                  <h3 class="service-advantages-section__item-title">
+                    КАКИЕ ЗАДАЧИ РЕШАЕТ LANDING PAGE?
+                  </h3>
+                  <p>
+                    Мотивирует посетителя совершить целевое действие: сделать звонок, заполнить форму, зарегистрироваться,
+                    подписаться на
+                    рассылку, оставить заказ
+                  </p>
+                  <p>
+                    Презентация продуктов и услуг компании
+                  </p>
+                  <p>
+                    Стимуляция продаж
+                  </p>
+                  <p>
+                    Повышение эффективности продвижения
+                  </p>
+                  <p>
+                    Предоставление полной контактной информации
+                  </p>
+                  <p>
+                    Создание нужного имиджа продукту или услуге
+                  </p>
+                  <p>
+                    Создание доверительного отношенияПодача конкурентных преимуществ
+                  </p>
+                </div>
+              </div>
+              <div class="service-advantages-section__item">
+                <div class="service-advantages-section__item-content">
+                  <h3 class="service-advantages-section__item-title">
+                    НАШЕ ПРЕИМУЩЕСТВО В ТОМ КАК МЫ ЭТО ДЕЛАЕМ!
+                  </h3>
+                  <p>
+                    Если вы планируете достичь успеха в бизнесе, не достаточно иметь просто хороший интернет сайт, надо иметь
+                    лучший! Наша
+                    команда экспертов позаботиться о том, чтобы ваш бизнес в интернете был презентован в интернете на наивысшем
+                    мировом
+                    уровне. Особое внимание при проектировании бизнес страничек, мы уделяем индивидуальному дизайну и удобству
+                    использования.
+                  </p>
+                  <p>
+                    Каждый бизнес сайт, созданный нашей командой, это скрупулезно подготовленный и максимально отображающий лицо
+                    фирмы –
+                    интернет проект. Простые по форме, и в тоже время необычно сконструированные бизнес сайты, это современный
+                    маркетинговый
+                    механизм, который помогает в достижении поставленных целей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-creation-steps-section page-section">
+          <div class="container">
+            <h2 class="service-creation-steps-section__title">
+              Этапы создания <br> Лендинга
+            </h2>
+            <ul class="service-creation-steps-section__list-wrap service-creation-steps">
+              <li class="service-creation-steps__item">
+                <svg class="service-creation-steps__item-line" width="223" height="41" viewBox="0 0 223 41" fill="none">
+                  <circle cx="113.5" cy="38.5" r="2.5" fill="#A89861"></circle>
+                  <line y1="37.5" x2="106" y2="37.5" stroke="#D8D8D8"></line>
+                  <line x1="120.834" y1="36.5285" x2="222.834" y2="0.528504" stroke="#D8D8D8"></line>
+                </svg>
+                <img src="images/circle.svg" width="25" height="25" alt="">
+                <span class="service-creation-steps__item-num">01</span>
+                <h3 class="service-creation-steps__item-title">Анализ</h3>
+                <p class="service-creation-steps__item-descr">
+                  Исследуем продукт/услугу бизнеса, анализируем конкурентов и аудиторию компании.
+                </p>
+              </li>
+              <li class="service-creation-steps__item">
+                <svg class="service-creation-steps__item-line" width="224" height="20" viewBox="0 0 224 20" fill="none">
+                  <circle cx="112.5" cy="17.5" r="2.5" fill="#A89861"></circle>
+                  <line x1="0.075321" y1="0.505706" x2="105.075" y2="16.5057" stroke="#D8D8D8"></line>
+                  <line x1="119.957" y1="17.5019" x2="223.957" y2="8.50186" stroke="#D8D8D8"></line>
+                </svg>
+                <img src="images/circle.svg" width="25" height="25" alt="">
+                <span class="service-creation-steps__item-num">02</span>
+                <h3 class="service-creation-steps__item-title">Прототип</h3>
+                <p class="service-creation-steps__item-descr">
+                  Создаем путь пользователя и его взаимодействие с контентом.
+                </p>
+              </li>
+              <li class="service-creation-steps__item">
+                <svg class="service-creation-steps__item-line" width="223" height="40" viewBox="0 0 223 40" fill="none">
+                  <circle cx="113.5" cy="37.5" r="2.5" fill="#A89861"></circle>
+                  <line x1="0.0188545" y1="33.5004" x2="107.017" y2="37.538" stroke="#D8D8D8"></line>
+                  <line x1="120.838" y1="35.5271" x2="222.838" y2="0.527067" stroke="#D8D8D8"></line>
+                </svg>
+                <img src="images/circle.svg" width="25" height="25" alt="">
+                <span class="service-creation-steps__item-num">01</span>
+                <h3 class="service-creation-steps__item-title">Анализ</h3>
+                <p class="service-creation-steps__item-descr">
+                  Исследуем продукт/услугу бизнеса, анализируем конкурентов и аудиторию компании.
+                </p>
+              </li>
+              <li class="service-creation-steps__item">
+                <svg class="service-creation-steps__item-line" width="224" height="27" viewBox="0 0 224 27" fill="none">
+                  <circle cx="113.5" cy="22.5" r="2.5" fill="#A89861"></circle>
+                  <line x1="0.98572" y1="26.5002" x2="106.985" y2="23.4717" stroke="#D8D8D8"></line>
+                  <line x1="119.901" y1="21.5099" x2="223.901" y2="0.509893" stroke="#D8D8D8"></line>
+                </svg>
+                <img src="images/circle.svg" width="25" height="25" alt="">
+                <span class="service-creation-steps__item-num">01</span>
+                <h3 class="service-creation-steps__item-title">Анализ</h3>
+                <p class="service-creation-steps__item-descr">
+                  Исследуем продукт/услугу бизнеса, анализируем конкурентов и аудиторию компании.
+                </p>
+              </li>
+              <li class="service-creation-steps__item">
+                <svg class="service-creation-steps__item-line" width="199" height="12" viewBox="0 0 199 12" fill="none">
+                  <line x1="0.972265" y1="11.5008" x2="198.972" y2="0.50077" stroke="url(#paint0_linear_99:633)"></line>
+                  <defs>
+                    <linearGradient id="paint0_linear_99:633" x1="2.99998" y1="11.9997" x2="163.5" y2="3.50006" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#D8D8D8"></stop>
+                      <stop offset="1" stop-color="#D8D8D8" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <img src="images/circle.svg" width="25" height="25" alt="">
+                <span class="service-creation-steps__item-num">01</span>
+                <h3 class="service-creation-steps__item-title">Анализ</h3>
+                <p class="service-creation-steps__item-descr">
+                  Исследуем продукт/услугу бизнеса, анализируем конкурентов и аудиторию компании.
+                </p>
+              </li>
+            </ul>
+            <div class="service-creation-steps-section__order-btn-wrap">
+              <button class="button button--accent service-creation-steps-section__order-btn">
+                Заказать проект
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-faq-section page-section">
+          <div class="container">
+            <div class="service-faq-section__inner">
+              <h2 class="service-faq-section__title section-title">
+                Частые вопросы по разработке Landing Page
+              </h2>
+              <ul class="service-faq-section__accordion accordion js-accordion">
+                <li class="accordion__item">
+                  <h3 class="accordion__title">Что лучше Landing page или многостраничный сайт?</h3>
+                  <div class="accordion__content">
+                    <p>
+                      Если вы продвигаете отдельный товар/услугу, лучше разрабатывать Landing page, т.к. все внимание пользователя
+                      сосредоточится именно на конкретном товаре/услуге и он с большей вероятностью совершит нужное целевое действие.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">Какая цена на создание Landing page?</h3>
+                  <div class="accordion__content">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, eius voluptas? Labore rem ipsam omnis
+                      obcaecati
+                      adipisci perspiciatis quidem, sunt sequi aut, eligendi accusantium iure atque autem harum asperiores
+                      ratione?
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">Какой срок создания Landing page?</h3>
+                  <div class="accordion__content">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, eius voluptas? Labore rem ipsam omnis
+                      obcaecati
+                      adipisci perspiciatis quidem, sunt sequi aut, eligendi accusantium iure atque autem harum asperiores
+                      ratione?
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-info-section">
+          <div class="container container--standart">
+            <div class="service-info-section__inner">
+              <div class="service-info-section__left-wrap">
+                <img src="images/service-info-section__left-img.png" alt="">
+              </div>
+              <div class="service-info-section__right-wrap">
+                <h2 class="service-info-section__title section-title">
+                  Что входит в стандартный <br> <span>Landing page</span>
+                </h2>
+                <div class="service-info-section__price-and-list-wrap">
+                  <div class="service-info-section__price-and-period-wrap">
+                    <div class="service-info-section__price-wrap">
+                      <span>от</span>
+                      <span>1500</span>
+                      <span>$</span>
+                    </div>
+                    <div class="service-info-section__period-wrap">
+                      от 2 недель
+                    </div>
+                  </div>
+                  <ul class="service-info-section__list">
+                    <li class="service-info-section__list-item">
+                      Анализ рынка
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Индивидуальный дизайн
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Адаптивная верстка шаблона
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Галерея товаров/услуг
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Контактная форма (Заявка)
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Начальная оптимизация сайта
+                    </li>
+                    <li class="service-info-section__list-item">
+                      Панель управления сайтом
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="button button--dark button--full-width button--square">
+              Заказать проект
+            </button>
+          </div>
+        </section>
+
+        <section class="feedback-section page-section">
+          <div class="container">
+            <div class="feedback-section__inner">
+              <div class="feedback-section__left-wrap">
+                <h2 class="feedback-section__title"><span>Готовы</span> <br> работать <br> с нами</h2>
+                <a class="button button--dark" href="#">Заказть услугу</a>
+              </div>
+              <form class="feedback-section__right-wrap feedback-form">
+                <h3 class="feedback-form__title">Напишите нам</h3>
+                <div class="feedback-form__inner">
+                  <div class="feedback-form__left-wrap">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="name" type="text" placeholder="Имя">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="email" type="email" placeholder="Email">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" name="tel" type="tel" placeholder="Телефон">
+                      </span>
+                    </label>
+                  </div>
+                  <div class="feedback-form__right-wrap">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" rows="8" placeholder="Сообщение"></textarea>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <footer class="feedback-form__footer">
+                  <div class="feedback-form__footer-info-wrap">
+                    <a class="feedback-form__footer-email" href="mailto:blackwave@gmail.com">
+                      blackwave@gmail.com
+                    </a>
+                    <a href="tel:380675907777" class="feedback-form__footer-tel">
+                      +38 (067) 590 77 77
+                    </a>
+                  </div>
+                  <div class="feedback-form__footer-submit-btn-wrap">
+                    <button class="feedback-form__footer-submit-btn" type="submit">
+                      Отправить
+                      <svg width="26" height="21">
+                        <use xlink:href="images/sprite.svg#right-arrow-icon">
+                        </use>
+                      </svg>
+                    </button>
+                  </div>
+                </footer>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+    <div class="page__footer-wrap">
+      <footer class="page-footer">
+        <div class="container container--standart">
+          <div class="page-footer__inner">
+            <div class="page-footer__top-wrap">
+              <div class="page-footer__top-item">
+
+                <a class="page-footer__logo logo" href="/">
+                  <img class="logo__img" src="images/logo-desktop.svg" width="94" height="54" alt="site logo ">
+                </a>
+
+                <ul class="page-footer-contacts">
+                  <li class="page-footer-contacts__item">
+                    <b class="page-footer-contacts__item-key">Телефон:</b>
+                    <a class="page-footer-contacts__item-value" href="tel:80935336589">
+                      093 533 65 89
+                    </a>
+                  </li>
+                  <li class="page-footer-contacts__item">
+                    <b class="page-footer-contacts__item-key">Email:</b>
+                    <a class="page-footer-contacts__item-value" href="mailto:blackwave@gmail.com">
+                      blackwave@gmail.com
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="page-footer__social-links social">
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg width="7" height="14">
+                        <use xlink:href="images/sprite.svg#facebook-icon">
+                        </use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg width="14" height="14">
+                        <use xlink:href="images/sprite.svg#instagram-icon">
+                        </use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg width="14" height="14">
+                        <use xlink:href="images/sprite.svg#linkedin-icon">
+                        </use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">Меню</h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Главная</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Услуги</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">О нас</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Клиенты</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Портфолио</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">РАЗРАБОТКА САЙТОВ</h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Сайт компании</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Интернет-каталог</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Корпоративный сайт</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Интернет-магазины</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Порталы</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Сервисы</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">УСЛУГИ</h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Комплексный аудит</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Разработка сайтов</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Разработка логотипа</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Продвижение сайта</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Поддержка сайта</a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">Дизайн для Sharepoint</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__bottom-wrap">
+              <p>Copyright © 2020-2021 Black wave</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a class="to-top to-top--visible" id="to-top" href="#">↑</a>
+    </div>
+  </div>
+
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
