@@ -15,6 +15,7 @@ import '@components/modal';
 import '@components/slider';
 import '@components/dynamic-adapt';
 import '@components/accordion';
+import '@components/menu-categories';
 
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
